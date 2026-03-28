@@ -22,6 +22,7 @@ export default function CaseStudiesSection() {
         <div className="grid gap-6 md:grid-cols-2">
           {caseStudies.map((caseStudy) => (
             <article key={caseStudy.title} className="apple-card p-6 hover:shadow-lg transition">
+              <div className="mb-4 h-40 rounded-2xl bg-slate-100 flex items-center justify-center text-slate-500">Photo placeholder</div>
               <h3 className="text-xl font-semibold mb-2">{caseStudy.title}</h3>
               <p className="text-foreground/70 mb-4 font-medium">{caseStudy.outcome}</p>
               <ul className="list-disc pl-5 space-y-2 text-sm text-muted-foreground">

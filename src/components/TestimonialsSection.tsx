@@ -1,19 +1,7 @@
 const testimonials = [
-  {
-    name: "Ellie Roberts",
-    role: "Safety Director, Prime Logistics",
-    quote: "NodeHub’s real-time alerts have reduced near-miss incidents by 58% at our UK hub. The evidence package also lowered audit preparation time from 3 days to 3 hours.",
-  },
-  {
-    name: "Marcos Silva",
-    role: "Operations COO, ColdChain Express",
-    quote: "The visibility into route deviations and PPE compliance is a game changer. We now run weekly risk reviews with actual event footage.",
-  },
-  {
-    name: "Tina Keller",
-    role: "HSE Lead, PanelTech Manufacturing",
-    quote: "On-prem edge AI aligned with our privacy policy and gave us immediate ROI on safety leadership KPIs.",
-  },
+  { name: "TBD", role: "TBD", quote: "" },
+  { name: "TBD", role: "TBD", quote: "" },
+  { name: "TBD", role: "TBD", quote: "" },
 ];
 
 export default function TestimonialsSection() {
@@ -25,9 +13,14 @@ export default function TestimonialsSection() {
           <h2 className="text-3xl md:text-4xl font-semibold">Trust signals from forward-thinking leaders</h2>
         </div>
         <div className="grid gap-6 md:grid-cols-3">
-          {testimonials.map((item) => (
-            <blockquote key={item.name} className="apple-card p-6">
-              <p className="text-sm text-foreground/80 leading-relaxed mb-4">“{item.quote}”</p>
+          {testimonials.map((item, index) => (
+            <blockquote key={`${item.name}-${index}`} className="apple-card p-6 flex flex-col items-center text-center">
+              <div className="h-16 w-16 rounded-full bg-slate-200 mb-4 flex items-center justify-center text-sm text-slate-500">Image</div>
+              {item.quote ? (
+                <p className="text-sm text-foreground/80 leading-relaxed mb-4">“{item.quote}”</p>
+              ) : (
+                <div className="h-6 w-40 bg-slate-100 rounded-full mb-4" />
+              )}
               <footer className="text-sm font-semibold">{item.name}</footer>
               <p className="text-xs text-muted-foreground">{item.role}</p>
             </blockquote>
