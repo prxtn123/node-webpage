@@ -19,7 +19,7 @@ const WHY_ITEMS = [
   {
     icon: Flag,
     title: "British-built and supported",
-    body: "Designed for UK warehousing and logistics — not retrofitted from US enterprise software.",
+    body: "Built in the UK for UK organisations — not retrofitted from US enterprise software.",
   },
   {
     icon: Server,
@@ -72,12 +72,12 @@ export default function Homepage() {
                 Greater Manchester · Computer vision
               </p>
               <h1 className="reveal text-[clamp(3.2rem,7.4vw,6.8rem)] font-bold leading-[0.88] tracking-[-0.035em] text-white">
-                Computer Vision<br />
-                Built for<br />
-                British Industry.
+                Computer Vision.<br />
+                Any Problem.<br />
+                Any Industry.
               </h1>
               <p className="reveal max-w-[44ch] text-lg leading-8 text-white/55 md:text-xl">
-                Praxis GB develops edge-deployed AI products that detect risk, protect people, and require zero technical expertise from the customer.
+                Praxis GB builds computer vision applications that solve real-world problems — across industries, environments, and use cases. We handle the technology so you can focus on the outcome.
               </p>
               <div className="reveal flex flex-col items-start gap-4 sm:flex-row sm:items-center">
                 <Link
@@ -120,8 +120,8 @@ export default function Homepage() {
                     border: "1px solid rgba(255,255,255,0.06)",
                   }}
                 >
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.35em] text-white/30">Trusted for</p>
-                  <p className="mt-4 text-xl font-semibold tracking-tight text-white">Logistics hubs</p>
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.35em] text-white/30">Applied across</p>
+                  <p className="mt-4 text-xl font-semibold tracking-tight text-white">Any sector</p>
                 </div>
                 <div
                   className="rounded-xl p-6"
@@ -130,8 +130,8 @@ export default function Homepage() {
                     border: "1px solid rgba(255,255,255,0.06)",
                   }}
                 >
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.35em] text-white/30">Designed for</p>
-                  <p className="mt-4 text-xl font-semibold tracking-tight text-white">British industry</p>
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.35em] text-white/30">Built in</p>
+                  <p className="mt-4 text-xl font-semibold tracking-tight text-white">The UK</p>
                 </div>
               </div>
             </div>
@@ -151,14 +151,13 @@ export default function Homepage() {
                 What we do
               </p>
               <h2 className="text-4xl font-bold leading-tight tracking-[-0.025em] text-white md:text-5xl">
-                Edge AI for the shop floor.
+                Computer vision that works.
               </h2>
             </div>
             <p className="self-end text-lg leading-9 text-white/55 reveal">
-              Praxis GB builds computer vision products that run on-site, on our hardware, with no
-              cloud dependency required. We train the models, manage the infrastructure, and hand
-              customers a working system. Our products detect what cameras see — people, vehicles,
-              PPE, behaviour — and turn that into evidence and action.
+              Praxis GB builds computer vision applications for real-world problems. We design,
+              train, and deploy the models — running on our hardware, on-site, with no cloud
+              dependency required. Whatever cameras can see, we can build a system to understand it.
             </p>
           </div>
         </section>
@@ -224,7 +223,12 @@ export default function Homepage() {
                   <div className="flex items-start justify-between">
                     <div>
                       <p className="text-[10px] font-semibold uppercase tracking-[0.44em] text-blue-400">Flagship product</p>
-                      <h3 className="mt-3 text-5xl font-bold tracking-tight text-white">.node</h3>
+                      <img
+                        src="/node-logo.png"
+                        alt=".node"
+                        className="mt-3 h-16 w-auto"
+                        style={{ mixBlendMode: "screen" }}
+                      />
                     </div>
                     <span className="rounded-full bg-blue-500/10 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-widest text-blue-400">
                       Live
@@ -236,9 +240,8 @@ export default function Homepage() {
                     audit-ready evidence — all on your hardware.
                   </p>
                   <div className="space-y-2.5 border-t border-white/[0.07] pt-6">
-                    <p className="text-sm text-white/40">— <span className="text-white/70">98.7%</span> detection accuracy in real operations</p>
+                    <p className="text-sm text-white/40">— <span className="text-white/70">90%</span> detection accuracy in real operations</p>
                     <p className="text-sm text-white/40">— <span className="text-white/70">&lt;100ms</span> alert turnaround, on-device</p>
-                    <p className="text-sm text-white/40">— <span className="text-white/70">ISO / OSHA</span> compliance reporting built in</p>
                   </div>
                 </div>
                 <Link
@@ -280,12 +283,12 @@ export default function Homepage() {
             >
               <p className="text-[10px] font-semibold uppercase tracking-[0.44em] text-blue-400">Who we work with</p>
               <h3 className="mt-5 text-2xl font-semibold tracking-tight text-white">
-                Logistics. Warehousing. Manufacturing.
+                Any sector. Any environment.
               </h3>
               <p className="mt-5 text-sm leading-7 text-white/50">
-                We work with logistics operators, third-party warehousing companies, distribution
-                centres and UK manufacturers who need reliable safety intelligence without high
-                consultancy overhead or cloud data risk.
+                We work with organisations that have a real operational problem and cameras that
+                can see it. From safety and compliance to monitoring, efficiency, and quality —
+                if computer vision can help, we can build and deploy it.
               </p>
             </div>
 
@@ -298,9 +301,9 @@ export default function Homepage() {
             >
               <p className="text-[10px] font-semibold uppercase tracking-[0.44em] text-white/30">Founder note</p>
               <blockquote className="mt-6 text-[1.05rem] leading-8 text-white/58 italic">
-                "Praxis GB was founded in Greater Manchester to solve a problem the founders saw
-                firsthand — safety incidents in busy warehouses that were entirely preventable, and
-                no affordable technology to stop them. We're building the tools we wish existed."
+                "Praxis GB was founded on the belief that computer vision should not require
+                enterprise budgets or specialist in-house teams. We build the models, manage the
+                infrastructure, and hand you a system that works — whatever problem you need solved."
               </blockquote>
             </div>
           </div>
