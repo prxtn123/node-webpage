@@ -59,8 +59,9 @@ export default function About() {
         <div className="max-w-[980px] mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-semibold text-center mb-6">Our flagship product</h2>
           <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-10">
-            node is our first product — a live safety monitoring system for warehouses and logistics
-            centres. It's deployed, operational, and delivering value today.
+            node is our first product — edge-deployed safety monitoring, currently live in warehouses
+            and logistics centres. It demonstrates what Praxis GB does: take a real-world problem,
+            build a computer vision solution, and deploy it without cloud dependency.
           </p>
           <div className="grid md:grid-cols-3 gap-6">
             {[

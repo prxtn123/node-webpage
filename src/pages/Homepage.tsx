@@ -49,9 +49,10 @@ export default function Homepage() {
 
         {/* ─── HERO ─────────────────────────────────────────────────────── */}
         <section className="relative min-h-screen overflow-hidden" aria-label="Hero">
-          {/* IMAGE: Full-bleed hero background — dark, moody warehouse/industrial interior
-              with operative in high-vis, showing scale of environment. Desaturated, overlaid
-              with dark gradient so white text remains legible. Dimensions: 1920x1080 min. */}
+          {/* IMAGE: Full-bleed hero background — dark, moody wide-angle environment
+              (could be warehouse, retail, construction, healthcare, transport).
+              Desaturated, overlaid with dark gradient so white text remains legible.
+              Dimensions: 1920x1080 min. */}
           <div
             aria-hidden
             className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#070809]/80 via-[#070809]/60 to-[#070809]"
@@ -97,7 +98,7 @@ export default function Homepage() {
                   See node →
                 </Link>
                 <span className="text-sm text-white/30">
-                  Installed in UK warehouses. No cloud required.
+                  Edge-deployed. No cloud required.
                 </span>
               </div>
             </div>
@@ -280,8 +281,8 @@ export default function Homepage() {
                 <p className="text-[10px] font-semibold uppercase tracking-[0.44em] text-white/25">Coming soon</p>
                 <h3 className="mt-5 text-3xl font-bold tracking-tight text-white/35">Next product</h3>
                 <p className="mt-5 text-sm leading-7 text-white/28">
-                  More edge AI systems in development. We are expanding the Praxis GB suite with new
-                  tools for site flow, productivity intelligence, and industrial compliance monitoring.
+                  More edge AI applications in development. We are expanding the Praxis GB suite
+                  into new industries and new problem spaces.
                 </p>
               </div>
             </div>
