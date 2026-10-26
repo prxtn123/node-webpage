@@ -1,20 +1,7 @@
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import NavBar from "@/components/NavBar";
 import { Footer } from "@/components/Footer";
 import { Flag, Server, Settings, Receipt } from "lucide-react";
-
-function useScrollReveal() {
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) =>
-        entries.forEach((e) => e.isIntersecting && e.target.classList.add("active")),
-      { threshold: 0.08, rootMargin: "0px 0px -48px 0px" }
-    );
-    document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  }, []);
-}
 
 const WHY_ITEMS = [
   {
@@ -40,8 +27,6 @@ const WHY_ITEMS = [
 ];
 
 export default function Homepage() {
-  useScrollReveal();
-
   return (
     <div className="min-h-screen bg-[#070809] text-white antialiased">
       <NavBar />
@@ -85,18 +70,18 @@ export default function Homepage() {
           <div className="relative mx-auto grid max-w-[1200px] min-h-screen grid-cols-1 items-center gap-8 px-6 pb-16 pt-44 md:px-10 md:pt-48 lg:grid-cols-[1fr_400px] lg:pt-44">
             {/* Left */}
             <div className="flex flex-col justify-center space-y-10">
-              <p className="reveal text-[10px] font-semibold uppercase tracking-[0.44em] text-blue-400">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.44em] text-blue-400">
                 Greater Manchester · Computer vision
               </p>
-              <h1 className="reveal text-[clamp(3.2rem,7.4vw,6.8rem)] font-bold leading-[0.88] tracking-[-0.035em] text-white">
+              <h1 className="text-[clamp(3.2rem,7.4vw,6.8rem)] font-bold leading-[0.88] tracking-[-0.035em] text-white">
                 Computer Vision.<br />
                 Any Problem.<br />
                 Any Industry.
               </h1>
-              <p className="reveal max-w-[44ch] text-lg leading-8 text-white/55 md:text-xl">
+              <p className="max-w-[44ch] text-lg leading-8 text-white/55 md:text-xl">
                 Praxis GB builds computer vision applications that solve real-world problems — across industries, environments, and use cases. We handle the technology so you can focus on the outcome.
               </p>
-              <div className="reveal flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+              <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
                 <a
                   href="https://nodehub.uk/node"
                   className="inline-flex items-center justify-center rounded-sm bg-white px-8 py-4 text-sm font-semibold tracking-wide text-black transition-all hover:bg-white/90 active:scale-95"
@@ -110,7 +95,7 @@ export default function Homepage() {
             </div>
 
             {/* Right — desktop asymmetric panel */}
-            <div className="hidden flex-col gap-5 lg:flex reveal">
+            <div className="hidden flex-col gap-5 lg:flex">
               <div
                 className="rounded-xl p-8"
                 style={{
@@ -163,7 +148,7 @@ export default function Homepage() {
           aria-label="What we do"
         >
           <div className="mx-auto grid max-w-[1200px] gap-12 lg:grid-cols-2">
-            <div className="space-y-5 reveal">
+            <div className="space-y-5">
               <p className="text-[10px] font-semibold uppercase tracking-[0.44em] text-blue-400">
                 What we do
               </p>
@@ -180,7 +165,7 @@ export default function Homepage() {
                 />
               </div>
             </div>
-            <p className="self-end text-lg leading-9 text-white/55 reveal">
+            <p className="self-end text-lg leading-9 text-white/55">
               Praxis GB builds computer vision applications for real-world problems. We design,
               train, and deploy the models — running on our hardware, on-site, with no cloud
               dependency required. Whatever cameras can see, we can build a system to understand it.
@@ -194,7 +179,7 @@ export default function Homepage() {
           aria-label="Why Praxis GB"
         >
           <div className="mx-auto max-w-[1200px] space-y-16">
-            <div className="reveal">
+            <div>
               <p className="text-[10px] font-semibold uppercase tracking-[0.44em] text-blue-400">Why Praxis GB</p>
               <h2 className="mt-4 text-4xl font-bold tracking-[-0.025em] text-white md:text-5xl">
                 Built different.
@@ -204,13 +189,12 @@ export default function Homepage() {
               className="grid border border-white/[0.06]"
               style={{ gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))" }}
             >
-              {WHY_ITEMS.map(({ icon: Icon, title, body }, i) => (
+              {WHY_ITEMS.map(({ icon: Icon, title, body }) => (
                 <div
                   key={title}
-                  className="reveal space-y-4 border-r border-b border-white/[0.06] p-8 last:border-r-0"
+                  className="space-y-4 border-r border-b border-white/[0.06] p-8 last:border-r-0"
                   style={{
                     background: "rgba(255,255,255,0.018)",
-                    transitionDelay: `${i * 70}ms`,
                   }}
                 >
                   <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/[0.06]">
@@ -230,7 +214,7 @@ export default function Homepage() {
           aria-label="Our products"
         >
           <div className="mx-auto max-w-[1200px] space-y-14">
-            <div className="reveal">
+            <div>
               <p className="text-[10px] font-semibold uppercase tracking-[0.44em] text-blue-400">Our products</p>
               <h2 className="mt-4 text-4xl font-bold tracking-[-0.025em] text-white md:text-5xl">
                 What we ship.
@@ -239,7 +223,7 @@ export default function Homepage() {
             <div className="grid gap-5 md:grid-cols-2">
               {/* node flagship */}
               <div
-                className="reveal flex flex-col justify-between rounded-xl p-10"
+                className="flex flex-col justify-between rounded-xl p-10"
                 style={{
                   background: "rgba(255,255,255,0.04)",
                   border: "1px solid rgba(255,255,255,0.1)",
@@ -288,7 +272,7 @@ export default function Homepage() {
 
               {/* placeholder */}
               <div
-                className="reveal flex flex-col justify-center rounded-xl p-10"
+                className="flex flex-col justify-center rounded-xl p-10"
                 style={{ border: "1px dashed rgba(255,255,255,0.1)" }}
               >
                 <p className="text-[10px] font-semibold uppercase tracking-[0.44em] text-white/25">Coming soon</p>
@@ -309,7 +293,7 @@ export default function Homepage() {
         >
           <div className="mx-auto grid max-w-[1200px] gap-6 lg:grid-cols-2">
             <div
-              className="reveal rounded-xl p-10"
+              className="rounded-xl p-10"
               style={{
                 background: "rgba(255,255,255,0.025)",
                 border: "1px solid rgba(255,255,255,0.07)",
@@ -327,7 +311,7 @@ export default function Homepage() {
             </div>
 
             <div
-              className="reveal rounded-xl p-10"
+              className="rounded-xl p-10"
               style={{
                 background: "rgba(255,255,255,0.018)",
                 border: "1px solid rgba(255,255,255,0.07)",

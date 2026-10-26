@@ -19,7 +19,7 @@ export const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 max-w-[980px] mx-auto px-6 pt-20 pb-32 text-center">
         {/* Logo */}
-        <div className="mb-8 animate-fade-in">
+        <div className="mb-8">
           <img
             src="/node-logo.png"
             alt=".node — Computer Vision. Built For Operators."
@@ -28,21 +28,21 @@ export const HeroSection = () => {
         </div>
 
         {/* Headline */}
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-[1.1] tracking-tight mb-6 animate-fade-in-delay-1">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-[1.1] tracking-tight mb-6">
           The future of
           <br />
           logistics safety.
         </h1>
 
         {/* Subheadline */}
-        <p className="text-xl md:text-2xl text-white/70 font-normal max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in-delay-2">
+        <p className="text-xl md:text-2xl text-white/70 font-normal max-w-2xl mx-auto mb-10 leading-relaxed">
           Proactively prevent near misses. Ensure total compliance.
           <br className="hidden md:block" />
           Transform standard cameras into intelligent safety systems.
         </p>
 
         {/* CTA Links */}
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in-delay-3">
+        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
           <button
             onClick={() => scrollToElement("product")}
             className="inline-flex items-center gap-2 text-xl text-blue-400 hover:text-blue-300 transition-colors"

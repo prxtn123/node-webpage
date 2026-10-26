@@ -140,50 +140,23 @@
   }
 }
 
-/* Smooth fade in animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fade-in {
-  animation: fadeIn 1s ease-out forwards;
-}
-
-.animate-fade-in-delay-1 {
-  animation: fadeIn 1s ease-out 0.1s forwards;
-  opacity: 0;
-}
-
-.animate-fade-in-delay-2 {
-  animation: fadeIn 1s ease-out 0.2s forwards;
-  opacity: 0;
-}
-
-.animate-fade-in-delay-3 {
-  animation: fadeIn 1s ease-out 0.3s forwards;
-  opacity: 0;
-}
-
-.animate-fade-in-delay-4 {
-  animation: fadeIn 1s ease-out 0.4s forwards;
-  opacity: 0;
-}
-
-/* Scroll reveal */
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
+/*
+  Marketing copy stays readable without waiting for an animation.
+  These classes used to start at opacity 0 (a 1s fade on /node, and an
+  IntersectionObserver fade on the homepage). If the animation never
+  finished — first paint, a background tab, reduced motion, or a capture
+  that never scrolled a section into view — /node looked like a black
+  screen with only the nav logos and scroll cue, and the homepage left a
+  large empty band between the hero and the footer.
+*/
+.animate-fade-in,
+.animate-fade-in-delay-1,
+.animate-fade-in-delay-2,
+.animate-fade-in-delay-3,
+.animate-fade-in-delay-4,
+.reveal,
 .reveal.active {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
+  animation: none;
 }
