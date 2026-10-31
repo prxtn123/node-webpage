@@ -3,8 +3,8 @@ import { FileVideo, Search, GitBranch, Lightbulb } from "lucide-react";
 const features = [
   {
     icon: FileVideo,
-    title: "Enhanced Footage",
-    description: "AI-enhanced video with annotations",
+    title: "Annotated clips",
+    description: "Each clip marks what was detected and when",
   },
   {
     icon: GitBranch,
@@ -37,8 +37,7 @@ export const EvidenceSection = () => {
           </h2>
 
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Clear, verifiable evidence and automated root cause mapping.
-            Transform incidents into learning opportunities with AI-powered analysis.
+            Clips, timelines and bowtie mapping for root cause analysis, so investigations rest on what happened, not on recollection.
           </p>
         </div>
 

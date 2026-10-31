@@ -1,7 +1,7 @@
 import { Users, AlertCircle, Route } from "lucide-react";
 
 const metrics = [
-  { icon: Users, label: "MMHE-Pedestrian", value: "2.5m+", desc: "Safe distance maintained" },
+  { icon: Users, label: "MHE and pedestrian", value: "2.5m+", desc: "Alert when a person comes within the set distance of moving MHE" },
   { icon: Route, label: "Path Monitoring", value: "Active", desc: "Walkway deviation alerts" },
   { icon: AlertCircle, label: "Response Time", value: "<100ms", desc: "Instant zone alerts" },
 ];
@@ -16,14 +16,13 @@ export const ProximitySection = () => {
             <p className="text-sm font-medium text-blue-500 mb-4">Proximity Intelligence</p>
 
             <h2 className="text-4xl md:text-5xl font-semibold text-foreground tracking-tight mb-6">
-              Depth-aware detection.
+              Distance,
               <br />
-              <span className="text-muted-foreground">Spatial awareness.</span>
+              <span className="text-muted-foreground">not just presence.</span>
             </h2>
 
             <p className="text-lg text-muted-foreground mb-10 leading-relaxed">
-              AI that understands spatial relationships in real-time. Flag risks like 
-              close proximity or off-path movement before they escalate.
+              node estimates how close people are to moving equipment and flags off-path movement before it becomes a collision.
             </p>
 
             {/* Metrics */}

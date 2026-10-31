@@ -1,9 +1,9 @@
 import { Shield, Clock, TrendingUp, BarChart2 } from "lucide-react";
 
 const highlights = [
-  { icon: Shield, title: "Safety first engine", description: "Classifies and prioritises risk events with variable severity scoring." },
+  { icon: Shield, title: "Risk scoring", description: "Each event is classed by type and severity so the highest risks reach a supervisor first." },
   { icon: Clock, title: "Proximity monitoring", description: "Live zone & distance analytics across all active operations." },
-  { icon: TrendingUp, title: "Performance insights", description: "Machine-read continuous improvement metrics tied to continuous compliance." },
+  { icon: TrendingUp, title: "Trend data for CI", description: "Event counts by shift, area and type, ready for a PDCA or DMAIC review." },
   { icon: BarChart2, title: "Automated reporting", description: "Dashboards with gated approvals, secure audit logs, and exportable evidence packs." },
 ];
 

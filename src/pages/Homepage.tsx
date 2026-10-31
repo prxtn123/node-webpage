@@ -245,7 +245,7 @@ export default function Homepage() {
                   </div>
                   <p className="text-sm leading-7 text-white/55">
                     Live safety monitoring for warehouses and logistics centres. node turns existing
-                    cameras into edge AI that prevents near misses, enforces compliance, and generates
+                    cameras into edge AI that prevents near misses, supports compliance with an audit trail, and generates
                     audit-ready evidence — all on your hardware.
                   </p>
                   <div className="space-y-2.5 border-t border-white/[0.07] pt-6">

@@ -26,14 +26,13 @@ export const ComplianceSection = () => {
           <p className="text-sm font-medium text-blue-400 mb-4">Compliance</p>
 
           <h2 className="text-4xl md:text-5xl font-semibold text-white tracking-tight mb-6">
-            Effortless adherence.
+            Evidence for audits
             <br />
-            <span className="text-white/60">Always audit-ready.</span>
+            <span className="text-white/60">and investigations.</span>
           </h2>
 
           <p className="text-lg text-white/60 leading-relaxed">
-            Real-time monitoring supports your compliance workflows with automated audit trails and evidence capture.
-            Stay on top of safety standards without manual effort.
+            Every event is logged with a clip and timestamp, giving you an audit trail for internal and customer audits and for investigations. It supports your safe systems of work. It does not replace them.
           </p>
         </div>
 

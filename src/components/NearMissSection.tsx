@@ -17,14 +17,13 @@ export const NearMissSection = () => {
             <p className="text-sm font-medium text-blue-500 mb-4">Near-Miss Prevention</p>
 
             <h2 className="text-4xl md:text-5xl font-semibold text-foreground tracking-tight mb-6">
-              Proactive safety.
+              Near misses,
               <br />
-              <span className="text-muted-foreground">Before incidents occur.</span>
+              <span className="text-muted-foreground">recorded as they happen.</span>
             </h2>
 
             <p className="text-lg text-muted-foreground mb-10 leading-relaxed">
-              Identify and alert on potential near misses in real time — no high-vis vest, 
-              zone violations, unsafe proximity — so teams can intervene instantly.
+              node flags a missing hi-vis vest, a pedestrian outside the walkway or a person too close to moving MHE, and alerts the supervisor while the risk is live. Near misses that would go unreported become data you can act on.
             </p>
 
             {/* Feature Pills */}
