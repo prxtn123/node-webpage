@@ -9,7 +9,7 @@ const industries = [
 
 export default function IndustryApplications() {
   return (
-    <section className="py-20 bg-white" id="industry-applications">
+    <section className="bg-white pb-20 pt-0" id="industry-applications">
       <div className="max-w-[980px] mx-auto px-6">
         <div className="text-center mb-10">
           <p className="text-sm font-medium text-blue-500 uppercase tracking-widest">Industry applications</p>
