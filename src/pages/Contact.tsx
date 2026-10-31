@@ -2,22 +2,43 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { useState } from "react";
 
+export function fieldText(value: FormDataEntryValue | null): string {
+  return typeof value === "string" ? value : "";
+}
+
+/** Opens the visitor's own mail client. Does not post the form anywhere. */
+export function buildDemoMailto(fields: {
+  name: string;
+  company: string;
+  email: string;
+  phone: string;
+  message: string;
+}): string {
+  const body = [
+    `Name: ${fields.name}`,
+    `Company: ${fields.company}`,
+    `Email: ${fields.email}`,
+    `Phone: ${fields.phone}`,
+    "",
+    fields.message,
+  ].join("\n");
+  const subject = `Demo request from ${fields.name} at ${fields.company}`;
+  return `mailto:hello@praxisgb.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const form = e.currentTarget;
-    const data = new FormData(form);
-    const name = data.get("name") as string;
-    const company = data.get("company") as string;
-    const email = data.get("email") as string;
-    const phone = data.get("phone") as string;
-    const message = data.get("message") as string;
-
-    const body = `Name: ${name}%0ACompany: ${company}%0AEmail: ${email}%0APhone: ${phone}%0A%0A${encodeURIComponent(message)}`;
-    const subject = encodeURIComponent(`Demo request from ${name} at ${company}`);
-    window.location.href = `mailto:hello@praxisgb.com?subject=${subject}&body=${body}`;
+    const data = new FormData(e.currentTarget);
+    window.location.href = buildDemoMailto({
+      name: fieldText(data.get("name")),
+      company: fieldText(data.get("company")),
+      email: fieldText(data.get("email")),
+      phone: fieldText(data.get("phone")),
+      message: fieldText(data.get("message")),
+    });
     setSubmitted(true);
   };
   return (
