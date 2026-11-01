@@ -25,7 +25,7 @@ const prerenderRoutes = [
   {
     url: "/node",
     outPath: join(distDir, "node", "index.html"),
-    mustInclude: ["logistics safety.", "Most sites are live within 2-4 weeks"],
+    mustInclude: ["not in the accident book.", "Most sites are live within 2-4 weeks"],
   },
 ];
 
