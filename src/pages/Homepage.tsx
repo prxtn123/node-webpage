@@ -7,7 +7,7 @@ const WHY_ITEMS = [
   {
     icon: Flag,
     title: "British-built and supported",
-    body: "Built in the UK for UK organisations — not retrofitted from US enterprise software.",
+    body: "Built in the UK for UK organisations, not retrofitted from US enterprise software.",
   },
   {
     icon: Server,
@@ -79,7 +79,7 @@ export default function Homepage() {
                 Any Industry.
               </h1>
               <p className="max-w-[44ch] text-lg leading-8 text-white/55 md:text-xl">
-                Praxis GB builds computer vision applications that solve real-world problems — across industries, environments, and use cases. We handle the technology so you can focus on the outcome.
+                Praxis GB builds computer vision applications that solve real-world problems, across industries, environments, and use cases. We handle the technology so you can focus on the outcome.
               </p>
               <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
                 <a
@@ -167,7 +167,7 @@ export default function Homepage() {
             </div>
             <p className="self-end text-lg leading-9 text-white/55">
               Praxis GB builds computer vision applications for real-world problems. We design,
-              train, and deploy the models — running on our hardware, on-site, with no cloud
+              train, and deploy the models, running on our hardware, on-site, with no cloud
               dependency required. Whatever cameras can see, we can build a system to understand it.
             </p>
           </div>
@@ -246,11 +246,11 @@ export default function Homepage() {
                   <p className="text-sm leading-7 text-white/55">
                     Live safety monitoring for warehouses and logistics centres. node turns existing
                     cameras into edge AI that prevents near misses, supports compliance with an audit trail, and generates
-                    audit-ready evidence — all on your hardware.
+                    audit-ready evidence, all on your hardware.
                   </p>
                   <div className="space-y-2.5 border-t border-white/[0.07] pt-6">
-                    <p className="text-sm text-white/40">— <span className="text-white/70">90%</span> detection accuracy in real operations</p>
-                    <p className="text-sm text-white/40">— <span className="text-white/70">&lt;100ms</span> alert turnaround, on-device</p>
+                    <p className="text-sm text-white/40"><span className="text-white/70">90%</span> detection accuracy in real operations.</p>
+                    <p className="text-sm text-white/40"><span className="text-white/70">&lt;100ms</span> alert turnaround, on-device.</p>
                   </div>
                   {/* node dashboard screenshot */}
                   <div className="mt-6 aspect-video w-full overflow-hidden rounded-lg border border-white/[0.06]">
@@ -305,7 +305,7 @@ export default function Homepage() {
               </h3>
               <p className="mt-5 text-sm leading-7 text-white/50">
                 We work with organisations that have a real operational problem and cameras that
-                can see it. From safety and compliance to monitoring, efficiency, and quality —
+                can see it. From safety and compliance to monitoring, efficiency, and quality,
                 if computer vision can help, we can build and deploy it.
               </p>
             </div>
@@ -321,7 +321,7 @@ export default function Homepage() {
               <blockquote className="mt-6 text-[1.05rem] leading-8 text-white/58 italic">
                 "Praxis GB was founded on the belief that computer vision should not require
                 enterprise budgets or specialist in-house teams. We build the models, manage the
-                infrastructure, and hand you a system that works — whatever problem you need solved."
+                infrastructure, and hand you a system that works, whatever problem you need solved."
               </blockquote>
             </div>
           </div>
