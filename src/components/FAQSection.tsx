@@ -1,4 +1,4 @@
-import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
+import { Accordion, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const faqs = [
   {
@@ -30,9 +30,12 @@ export default function FAQSection() {
 
         <Accordion type="single" collapsible className="space-y-2">
           {faqs.map((faq) => (
-            <AccordionItem key={faq.question} value={faq.question} className="border rounded-2xl border-black/10">
+            <AccordionItem key={faq.question} value={faq.question} className="group border rounded-2xl border-black/10">
               <AccordionTrigger className="px-5 py-4 text-left">{faq.question}</AccordionTrigger>
-              <AccordionContent className="px-5 text-sm text-muted-foreground">{faq.answer}</AccordionContent>
+              {/* Answers stay in the HTML while collapsed so non-JS crawlers can read them. */}
+              <div className="h-0 overflow-hidden px-5 text-sm text-muted-foreground group-data-[state=open]:h-auto group-data-[state=open]:pb-4">
+                {faq.answer}
+              </div>
             </AccordionItem>
           ))}
         </Accordion>

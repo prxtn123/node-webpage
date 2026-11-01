@@ -3,7 +3,8 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState, type ReactNode } from "react";
+import DocumentHead from "./components/DocumentHead";
 import Homepage from "./pages/Homepage";
 import Index from "./pages/Index";
 import Product from "./pages/Product";
@@ -25,14 +26,35 @@ function ScrollToTop() {
   return null;
 }
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <ScrollToTop />
-        <Routes>
+function MountAfterHydration({ children }: { children: ReactNode }) {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+  if (!mounted) return null;
+  return <>{children}</>;
+}
+
+export function AppProviders({ children }: { children: ReactNode }) {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <MountAfterHydration>
+          <Sonner />
+        </MountAfterHydration>
+        {children}
+      </TooltipProvider>
+    </QueryClientProvider>
+  );
+}
+
+export function AppRoutes() {
+  return (
+    <>
+      <ScrollToTop />
+      <DocumentHead />
+      <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/node" element={<Index />} />
           <Route path="/product" element={<Product />} />
@@ -47,9 +69,16 @@ const App = () => (
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
+    </>
+  );
+}
+
+const App = () => (
+  <AppProviders>
+    <BrowserRouter>
+      <AppRoutes />
+    </BrowserRouter>
+  </AppProviders>
 );
 
 export default App;
