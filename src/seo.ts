@@ -37,7 +37,7 @@ const organizationJsonLd: Record<string, unknown> = {
     addressCountry: "GB",
   },
   description:
-    "Praxis GB builds computer vision applications that solve real-world problems — across industries, environments, and use cases.",
+    "Praxis GB builds computer vision applications that solve real-world problems, across industries, environments, and use cases.",
 };
 
 const home: RouteSeo = {
@@ -75,6 +75,30 @@ const node: RouteSeo = {
   },
 };
 
+const privacy: RouteSeo = {
+  title: "Privacy notice | Praxis GB",
+  description:
+    "How Praxis GB handles personal information on the nodehub.uk website, including contact enquiries, hosting logs, and your rights under UK GDPR.",
+  canonical: `${SITE_ORIGIN}/privacy/`,
+  image: null,
+  imageWidth: null,
+  imageHeight: null,
+  imageAlt: null,
+  jsonLd: {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: "Privacy notice",
+    url: `${SITE_ORIGIN}/privacy/`,
+    description:
+      "How Praxis GB handles personal information on the nodehub.uk website, including contact enquiries, hosting logs, and your rights under UK GDPR.",
+    isPartOf: {
+      "@type": "WebSite",
+      name: "Praxis GB",
+      url: `${SITE_ORIGIN}/`,
+    },
+  },
+};
+
 const legacy: RouteSeo = {
   title: LEGACY_TITLE,
   description: LEGACY_DESCRIPTION,
@@ -95,6 +119,7 @@ export function getRouteSeo(pathname: string): RouteSeo {
   const path = normalisePath(pathname);
   if (path === "/") return home;
   if (path === "/node") return node;
+  if (path === "/privacy") return privacy;
   return legacy;
 }
 

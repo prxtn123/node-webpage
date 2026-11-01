@@ -27,6 +27,11 @@ const prerenderRoutes = [
     outPath: join(distDir, "node", "index.html"),
     mustInclude: ["not in the accident book.", "Most sites are live within 2-4 weeks"],
   },
+  {
+    url: "/privacy",
+    outPath: join(distDir, "privacy", "index.html"),
+    mustInclude: ["This notice is for the website at nodehub.uk"],
+  },
 ];
 
 function escapeHtml(value) {
@@ -131,4 +136,6 @@ for (const route of prerenderRoutes) {
   console.log(`Prerendered ${route.url} -> ${route.outPath}`);
 }
 
-console.log(`Copied SPA shell for routes: ${shellRoutes.filter((route) => route !== "node").join(", ")}`);
+console.log(
+  `Copied SPA shell for routes: ${shellRoutes.filter((route) => route !== "node" && route !== "privacy").join(", ")}`,
+);

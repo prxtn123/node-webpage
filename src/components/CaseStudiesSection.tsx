@@ -3,13 +3,13 @@ export default function CaseStudiesSection() {
     {
       title: "Warehouse safety monitoring",
       outcome: "Live deployment. Results will be published at the end of the measurement period.",
-      metrics: ["Near-miss detection and alerting", "Automated evidence capture", "Ongoing — results to be published"],
+      metrics: ["Near-miss detection and alerting", "Automated evidence capture", "Ongoing. Results to be published."],
       image: "/images/site-warehouse.jpg",
     },
     {
       title: "Logistics centre pilot",
       outcome: "Pilot in progress at a logistics centre.",
-      metrics: ["Edge-deployed, no cloud dependency", "Integrated with existing camera infrastructure", "Ongoing — results to be published"],
+      metrics: ["Edge-deployed, no cloud dependency", "Integrated with existing camera infrastructure", "Ongoing. Results to be published."],
       image: "/images/site-logistics.jpg",
     },
   ];

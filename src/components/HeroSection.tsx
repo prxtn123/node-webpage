@@ -22,7 +22,7 @@ export const HeroSection = () => {
         <div className="mb-8">
           <img
             src="/node-logo.png"
-            alt=".node — Computer Vision. Built For Operators."
+            alt=".node. Computer Vision. Built For Operators."
             className="mx-auto h-20 md:h-28 lg:h-36 w-auto"
           />
         </div>
