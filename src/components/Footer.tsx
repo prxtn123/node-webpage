@@ -42,12 +42,12 @@ export const Footer = () => {
       <div className="max-w-[980px] mx-auto px-6 py-20">
         <div className="text-center">
           <h2 className="text-4xl md:text-5xl font-semibold text-foreground tracking-tight mb-6">
-            Ready to transform
+            See node
             <br />
-            your safety operations?
+            on your site.
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-            Join the industry leaders pioneering the future of logistics safety.
+            We can show you a live system and discuss a pilot on one area of your warehouse.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -75,7 +75,7 @@ export const Footer = () => {
             <div className="col-span-2">
               <span className="font-semibold text-lg text-foreground">node</span>
               <p className="text-sm text-muted-foreground mt-3 mb-6 max-w-xs">
-                AI-powered safety platform for logistics and supply chain.
+                Computer vision for warehouse and logistics safety, processed on site.
               </p>
               
               {/* Contact Info */}

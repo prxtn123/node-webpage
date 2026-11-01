@@ -3,8 +3,8 @@ import { Gauge, Activity, Workflow, TrendingUp } from "lucide-react";
 const features = [
   {
     icon: Gauge,
-    title: "Automated Task Timing",
-    description: "Precisely measure activity duration without manual intervention.",
+    title: "Process step timing",
+    description: "How long each process step takes, by area, not by person.",
   },
   {
     icon: Activity,
@@ -29,17 +29,16 @@ export const IndustrialFutureSection = () => {
       <div className="max-w-[980px] mx-auto px-6">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <p className="text-sm font-medium text-blue-500 mb-4">Industrial Engineering</p>
+          <p className="text-sm font-medium text-blue-500 mb-4">Process insight</p>
           
           <h2 className="text-4xl md:text-5xl font-semibold text-foreground tracking-tight mb-6">
-            Building tomorrow's
+            Flow and congestion,
             <br />
-            efficiency today.
+            not individual performance.
           </h2>
 
           <p className="text-xl text-muted-foreground leading-relaxed">
-            AI cameras automatically measure task durations, cycle times, and process flows 
-            with no disruption. Turn vision into actionable productivity intelligence.
+            The same cameras show where traffic builds up, where routes cross and how long process steps take, so CI teams can fix layout and flow.
           </p>
         </div>
 

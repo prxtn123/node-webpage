@@ -4,7 +4,7 @@ const steps = [
   {
     label: "01",
     title: "Camera capture",
-    description: "Connect existing IP cameras or edge sensors in minutes.",
+    description: "Works with your existing RTSP/ONVIF IP cameras. We fit and manage the edge hardware.",
     icon: Eye,
   },
   {
@@ -16,13 +16,13 @@ const steps = [
   {
     label: "03",
     title: "Incident enrichment",
-    description: "Auto-clips, risk tags and compliance records are stored to your secure archive.",
+    description: "Each event is saved as a short clip with time and event type, ready for an investigation or a toolbox talk.",
     icon: Video,
   },
   {
     label: "04",
     title: "Actionable insights",
-    description: "Heatmaps, trend scores and C-suite reports for continuous improvement.",
+    description: "A site-wide safety score and trends by shift and area, for daily huddles, shift handovers and SHEQ reviews.",
     icon: BarChart2,
   },
 ];

@@ -3,23 +3,23 @@ import { Shield, Target, Clock, TrendingUp } from "lucide-react";
 const stats = [
   {
     icon: Shield,
-    value: "Near Misses",
-    label: "Prevented proactively",
+    value: "Near misses",
+    label: "Detected and logged as they happen",
   },
   {
     icon: Target,
-    value: "Always-on",
-    label: "Compliance monitoring",
+    value: "PPE and walkways",
+    label: "Checked on every shift",
   },
   {
     icon: Clock,
-    value: "Real-time",
-    label: "Task timing insights",
+    value: "Safety score",
+    label: "Site-wide, by shift",
   },
   {
     icon: TrendingUp,
-    value: "Optimised",
-    label: "Workflow efficiency",
+    value: "Alerts",
+    label: "Sent to supervisors on site",
   },
 ];
 
@@ -30,11 +30,10 @@ export const StatsSection = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">
           <h2 className="text-4xl md:text-5xl font-semibold text-foreground tracking-tight mb-6">
-            A new standard for safety.
+            Leading indicators for site safety.
           </h2>
           <p className="text-xl text-muted-foreground leading-relaxed">
-            Built with industry leaders to deliver what logistics truly needs: 
-            prevention over reaction, compliance without effort.
+            Most sites judge safety on lagging numbers: RIDDOR reportables, lost-time injuries, first-aid cases. node records the near misses that come before them, so you can act while it is still a near miss.
           </p>
         </div>
 

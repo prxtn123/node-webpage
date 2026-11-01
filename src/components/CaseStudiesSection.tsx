@@ -2,13 +2,13 @@ export default function CaseStudiesSection() {
   const caseStudies = [
     {
       title: "Warehouse safety monitoring",
-      outcome: "Live deployment with measurable safety improvements",
+      outcome: "Live deployment. Results will be published at the end of the measurement period.",
       metrics: ["Near-miss detection and alerting", "Automated evidence capture", "Ongoing — results to be published"],
       image: "/images/site-warehouse.jpg",
     },
     {
       title: "Logistics centre pilot",
-      outcome: "Pilot programme delivering real-time compliance data",
+      outcome: "Pilot in progress at a logistics centre.",
       metrics: ["Edge-deployed, no cloud dependency", "Integrated with existing camera infrastructure", "Ongoing — results to be published"],
       image: "/images/site-logistics.jpg",
     },
@@ -19,7 +19,7 @@ export default function CaseStudiesSection() {
       <div className="max-w-[980px] mx-auto px-6">
         <div className="text-center mb-12">
           <p className="text-sm font-medium text-blue-500 uppercase tracking-widest">Case studies</p>
-          <h2 className="text-3xl md:text-4xl font-semibold">Where node is deployed</h2>
+          <h2 className="text-3xl md:text-4xl font-semibold">Current deployments</h2>
         </div>
         <div className="grid gap-6 md:grid-cols-2">
           {caseStudies.map((caseStudy) => (

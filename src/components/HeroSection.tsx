@@ -29,16 +29,16 @@ export const HeroSection = () => {
 
         {/* Headline */}
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-[1.1] tracking-tight mb-6">
-          The future of
+          Catch near misses on the floor,
           <br />
-          logistics safety.
+          not in the accident book.
         </h1>
 
         {/* Subheadline */}
         <p className="text-xl md:text-2xl text-white/70 font-normal max-w-2xl mx-auto mb-10 leading-relaxed">
-          Proactively prevent near misses. Ensure total compliance.
+          node uses your existing cameras to flag pedestrian and MHE conflicts, missing hi-vis and walkway breaches as they happen.{" "}
           <br className="hidden md:block" />
-          Transform standard cameras into intelligent safety systems.
+          Processing stays on site.
         </p>
 
         {/* CTA Links */}

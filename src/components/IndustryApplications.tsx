@@ -1,5 +1,5 @@
 const industries = [
-  "E-commerce fulfillment",
+  "E-commerce fulfilment",
   "Cold chain logistics",
   "Manufacturing & assembly",
   "Ports & terminals",
@@ -13,7 +13,7 @@ export default function IndustryApplications() {
       <div className="max-w-[980px] mx-auto px-6">
         <div className="text-center mb-10">
           <p className="text-sm font-medium text-blue-500 uppercase tracking-widest">Industry applications</p>
-          <h2 className="text-3xl md:text-4xl font-semibold">Built for the hardest logistics environments</h2>
+          <h2 className="text-3xl md:text-4xl font-semibold">Sites where people and MHE share space</h2>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {industries.map((name) => (
