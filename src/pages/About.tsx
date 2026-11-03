@@ -39,7 +39,7 @@ export default function About() {
             <h3 className="font-semibold mb-4">What we believe</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Computer vision should be practical, affordable, and private. You shouldn't need a
-              data science team or a cloud contract to get value from what your cameras already see.
+              data science team or a cloud contract.
             </p>
             <div className="grid grid-cols-2 gap-3">
               <div className="p-3 rounded-2xl bg-white shadow-sm">

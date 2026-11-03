@@ -42,7 +42,7 @@ const howItWorksSteps = [
     icon: Cpu,
     title: "Edge processing on-device",
     description:
-      "node runs on NVIDIA Jetson hardware installed at your site. Live camera feeds are processed locally - no footage is sent to the cloud, ever.",
+      "node runs on NVIDIA Jetson hardware installed at your site. Its own cameras are processed on site, and no footage is sent to the cloud.",
   },
   {
     step: "02",
@@ -71,7 +71,7 @@ const privateFeatures = [
   {
     icon: HardDrive,
     title: "On-device inference",
-    description: "All AI processing runs locally on your hardware. Video never leaves your site.",
+    description: "All AI processing runs on site, on node's own hardware. Video never leaves your site.",
   },
   {
     icon: WifiOff,
@@ -105,8 +105,7 @@ export default function HowItWorks() {
             What is node?
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            An intelligent safety system for warehouses and manufacturing facilities - running
-            entirely on your hardware, with no cloud costs and no data leaving your site.
+            An intelligent safety system for warehouses and manufacturing facilities. node is a standalone, self-contained system with its own cameras and its own network. Processing stays on site, with no cloud required and no cloud costs. No footage leaves the site. It is not connected to your IT network or CCTV.
           </p>
         </div>
       </section>
@@ -140,8 +139,7 @@ export default function HowItWorks() {
               From camera to dashboard.
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              node turns your existing cameras into a proactive safety monitoring system - without
-              replacing any infrastructure.
+              node is a standalone, self-contained system. It uses its own cameras and its own network for safety monitoring on site. It is not connected to your IT network or CCTV, and no cloud is required.
             </p>
           </div>
 
