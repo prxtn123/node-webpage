@@ -4,7 +4,7 @@ const steps = [
   {
     label: "01",
     title: "Camera capture",
-    description: "Works with your existing RTSP/ONVIF IP cameras. We fit and manage the edge hardware.",
+    description: "node uses its own cameras and its own network, not your IT network or CCTV. We fit and manage the edge hardware.",
     icon: Eye,
   },
   {

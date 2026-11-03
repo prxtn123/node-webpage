@@ -36,9 +36,9 @@ export const HeroSection = () => {
 
         {/* Subheadline */}
         <p className="text-xl md:text-2xl text-white/70 font-normal max-w-2xl mx-auto mb-10 leading-relaxed">
-          node uses your existing cameras to flag pedestrian and MHE conflicts, missing hi-vis and walkway breaches as they happen.{" "}
+          node is a standalone, self-contained system. It uses its own cameras and its own network to flag pedestrian and MHE conflicts, missing hi-vis and walkway breaches as they happen.{" "}
           <br className="hidden md:block" />
-          Processing stays on site.
+          Processing stays on site, with no cloud required. It is not connected to your IT network or CCTV.
         </p>
 
         {/* CTA Links */}

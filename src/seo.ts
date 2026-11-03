@@ -55,7 +55,7 @@ const home: RouteSeo = {
 const node: RouteSeo = {
   title: "node, near-miss detection for UK warehouses, by Praxis GB",
   description:
-    "node uses existing cameras to flag MHE and pedestrian conflicts, PPE gaps and walkway breaches, processed on site, with clips and a site safety score for SHEQ teams.",
+    "node is a standalone, self-contained system. It uses its own cameras and its own network to flag MHE and pedestrian conflicts, PPE gaps and walkway breaches, processed on site, with clips and a site safety score for SHEQ teams. It is not connected to your IT network or CCTV.",
   canonical: `${SITE_ORIGIN}/node/`,
   image: `${SITE_ORIGIN}/images/hero-node.jpg`,
   imageWidth: 1920,

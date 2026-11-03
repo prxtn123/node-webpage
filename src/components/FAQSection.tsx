@@ -3,19 +3,19 @@ import { Accordion, AccordionItem, AccordionTrigger } from "@/components/ui/acco
 const faqs = [
   {
     question: "How quickly can node be installed on new sites?",
-    answer: "Most sites are live within 2-4 weeks from contract signature, including network readiness audit and pilot tuning."
+    answer: "Most sites are live within 2-4 weeks from contract signature, including pilot tuning."
   },
   {
-    question: "Do we need to replace existing cameras?",
-    answer: "No. node supports standard RTSP/ONVIF cameras and can also work with new high-res cameras for the highest fidelity risk detection."
+    question: "Does node use site cameras or site CCTV?",
+    answer: "No. node is a standalone, self-contained system. It uses its own cameras and its own network, and it is not connected to your IT network or CCTV."
   },
   {
     question: "What data residency guarantees do you provide?",
     answer: "All video processing is on-prem. Metadata and incident logs are retained in your specified region (UK/EU/US) and we provide a DPA with SCCs."
   },
   {
-    question: "Can node integrate with our existing systems?",
-    answer: "node is designed to work alongside your existing infrastructure. Contact us for integration specifics."
+    question: "Does node connect to our IT network or CCTV?",
+    answer: "No. node runs off your systems, on its own network. It is not connected to your IT network or CCTV, and no cloud is required."
   },
 ];
 
