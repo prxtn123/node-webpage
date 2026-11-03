@@ -9,7 +9,7 @@ export default function CaseStudiesSection() {
     {
       title: "Logistics centre pilot",
       outcome: "Pilot in progress at a logistics centre.",
-      metrics: ["Edge-deployed, no cloud dependency", "Integrated with existing camera infrastructure", "Ongoing. Results to be published."],
+      metrics: ["Edge-deployed, no cloud dependency", "Own cameras and network, not site IT or CCTV", "Ongoing. Results to be published."],
       image: "/images/site-logistics.jpg",
     },
   ];

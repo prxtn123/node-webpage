@@ -244,9 +244,10 @@ export default function Homepage() {
                     </span>
                   </div>
                   <p className="text-sm leading-7 text-white/55">
-                    Live safety monitoring for warehouses and logistics centres. node turns existing
-                    cameras into edge AI that prevents near misses, supports compliance with an audit trail, and generates
-                    audit-ready evidence, all on your hardware.
+                    Live safety monitoring for warehouses and logistics centres. node is a standalone,
+                    self-contained system with its own cameras and its own network. It prevents near misses,
+                    supports compliance with an audit trail, and generates audit-ready evidence on the edge,
+                    with no cloud required. It is not connected to your IT network or CCTV.
                   </p>
                   <div className="space-y-2.5 border-t border-white/[0.07] pt-6">
                     <p className="text-sm text-white/40"><span className="text-white/70">90%</span> detection accuracy in real operations.</p>

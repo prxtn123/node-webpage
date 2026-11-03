@@ -21,11 +21,19 @@ const shellRoutes = [
 ];
 
 const prerenderRoutes = [
-  { url: "/", outPath: indexPath, mustInclude: ["Computer Vision.", "Greater Manchester"] },
+  {
+    url: "/",
+    outPath: indexPath,
+    mustInclude: ["Computer Vision.", "Greater Manchester", "its own cameras and its own network"],
+  },
   {
     url: "/node",
     outPath: join(distDir, "node", "index.html"),
-    mustInclude: ["not in the accident book.", "Most sites are live within 2-4 weeks"],
+    mustInclude: [
+      "not in the accident book.",
+      "Most sites are live within 2-4 weeks",
+      "its own cameras and its own network",
+    ],
   },
   {
     url: "/privacy",

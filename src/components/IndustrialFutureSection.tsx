@@ -38,7 +38,7 @@ export const IndustrialFutureSection = () => {
           </h2>
 
           <p className="text-xl text-muted-foreground leading-relaxed">
-            The same cameras show where traffic builds up, where routes cross and how long process steps take, so CI teams can fix layout and flow.
+            node's own cameras show where traffic builds up, where routes cross and how long process steps take, so CI teams can fix layout and flow.
           </p>
         </div>
 
