@@ -30,7 +30,13 @@ const prerenderRoutes = [
   {
     url: "/privacy",
     outPath: join(distDir, "privacy", "index.html"),
-    mustInclude: ["This notice is for the website at nodehub.uk"],
+    mustInclude: [
+      "This notice is for the website at nodehub.uk",
+      "Enquiry emails are kept for up to 24 months after our last contact, then deleted, unless they become part of a customer relationship.",
+      "hosted on GitHub Pages (GitHub, Inc.), which processes standard server data such as IP addresses when pages are served",
+      "GitHub, Inc. is in the United States, so that data is transferred to the US.",
+      "Privacy questions and data rights requests go to Tom Noble",
+    ],
   },
 ];
 

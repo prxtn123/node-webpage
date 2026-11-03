@@ -11,7 +11,7 @@ export default function Legal() {
           <h1 className="text-4xl md:text-5xl font-semibold text-black tracking-tight mb-4">
             Privacy, GDPR & Terms
           </h1>
-          <p className="text-sm text-gray-500 mb-12">Last updated: 31 October 2026</p>
+          <p className="text-sm text-gray-500 mb-12">Last updated: 3 November 2026</p>
 
           <div className="prose prose-lg max-w-none">
             <p className="text-lg text-gray-700 leading-relaxed mb-8">
@@ -30,7 +30,7 @@ export default function Legal() {
             </p>
             <ul className="list-disc pl-6 mb-6 space-y-2 text-gray-700">
               <li><strong>Contact and enquiry data:</strong> the contact form does not send your details to our servers. It opens your own email program with a message addressed to hello@praxisgb.com. That message can include your name, company, email address, phone number and what you wrote. Nothing is sent unless you send the email. You can also email hello@praxisgb.com, or call the number on the contact page, yourself.</li>
-              <li><strong>Hosting logs:</strong> the site is static files hosted on GitHub Pages. When your browser loads a page, the host can record ordinary connection data in its server logs, such as your IP address, the page requested and the time. This website does not add its own logging on top of that.</li>
+              <li><strong>Hosting logs:</strong> the website is hosted on GitHub Pages (GitHub, Inc.), which processes standard server data such as IP addresses when pages are served. The host can also record the page requested and the time. This website does not add its own logging on top of that.</li>
               <li><strong>Fonts:</strong> the typeface (Inter) is a file on this website. Your browser loads it from nodehub.uk. Visiting the site does not send your IP address to a font provider.</li>
             </ul>
             <p className="text-gray-700 leading-relaxed mb-4">
@@ -62,7 +62,7 @@ export default function Legal() {
               We do not sell personal data.
             </p>
             <ul className="list-disc pl-6 mb-8 space-y-2 text-gray-700">
-              <li>GitHub Pages hosts the website, so loading a page means that host receives the connection data described above.</li>
+              <li>GitHub Pages (GitHub, Inc.) hosts the website, so loading a page means that host receives the connection data described above. GitHub, Inc. is in the United States, so that data is transferred to the US.</li>
               <li>If you send the contact email, it goes through your email provider to the hello@praxisgb.com mailbox. The form is not passed to any other service.</li>
               <li>We may share information with legal authorities when the law requires it.</li>
             </ul>
@@ -72,7 +72,7 @@ export default function Legal() {
               The website does not keep a copy of the contact form. It does not keep analytics records or cookie records, because it does not use them.
             </p>
             <p className="text-gray-700 leading-relaxed mb-8">
-              If you send us an email, that message is held in the mailbox it was sent to so we can reply.
+              Enquiry emails are kept for up to 24 months after our last contact, then deleted, unless they become part of a customer relationship.
             </p>
 
             <h3 className="text-xl font-semibold text-black mt-8 mb-4">Your rights under UK GDPR</h3>
@@ -84,8 +84,11 @@ export default function Legal() {
               <li>Withdraw consent at any time</li>
               <li>Lodge a complaint with the Information Commissioner's Office (ICO) - <a href="https://ico.org.uk" className="text-blue-600 hover:text-blue-700">ico.org.uk</a></li>
             </ul>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              Privacy questions and data rights requests go to Tom Noble, the privacy contact for Praxis GB, at <a href="mailto:privacy@praxisgb.com" className="text-blue-600 hover:text-blue-700">privacy@praxisgb.com</a>. We will respond within one month.
+            </p>
             <p className="text-gray-700 leading-relaxed mb-8">
-              To exercise any of these rights, email <a href="mailto:privacy@praxisgb.com" className="text-blue-600 hover:text-blue-700">privacy@praxisgb.com</a>. We will respond within one month.
+              A small organisation like Praxis GB does not need a formal Data Protection Officer under UK GDPR.
             </p>
 
             <h2 className="text-3xl font-semibold text-black tracking-tight mt-16 mb-6">GDPR Compliance Statement</h2>
@@ -141,7 +144,7 @@ export default function Legal() {
 
             <h3 className="text-xl font-semibold text-black mt-8 mb-4">Contact</h3>
             <p className="text-gray-700 leading-relaxed mb-2">
-              For privacy queries: <a href="mailto:privacy@praxisgb.com" className="text-blue-600 hover:text-blue-700">privacy@praxisgb.com</a>
+              Privacy questions and data rights requests go to Tom Noble, the privacy contact for Praxis GB, at <a href="mailto:privacy@praxisgb.com" className="text-blue-600 hover:text-blue-700">privacy@praxisgb.com</a>.
             </p>
             <p className="text-gray-700 leading-relaxed mb-12">
               General enquiries: <a href="mailto:hello@praxisgb.com" className="text-blue-600 hover:text-blue-700">hello@praxisgb.com</a>
