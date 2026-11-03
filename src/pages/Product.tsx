@@ -17,9 +17,9 @@ const productFeatures = [
   },
   {
     icon: Server,
-    title: "IT-friendly deployment",
+    title: "Standalone deployment",
     description:
-      "Works with existing CCTV infrastructure, Azure IoT, or on-prem orchestration with no forklift upgrades.",
+      "node is a standalone, self-contained system. It uses its own cameras and its own network, and it is not connected to your IT network or CCTV. Processing stays on site, with no cloud required. No forklift upgrades.",
   },
   {
     icon: Zap,
@@ -75,14 +75,14 @@ export default function Product() {
       <section className="py-20 bg-white">
         <div className="max-w-[980px] mx-auto px-6">
           <div className="mb-10 text-center">
-            <p className="uppercase text-xs font-semibold tracking-widest text-blue-500 mb-2">Integrations</p>
-            <h2 className="text-3xl md:text-4xl font-semibold">Works with your existing infrastructure.</h2>
+            <p className="uppercase text-xs font-semibold tracking-widest text-blue-500 mb-2">Deployment</p>
+            <h2 className="text-3xl md:text-4xl font-semibold">A standalone, self-contained system.</h2>
             <p className="text-muted-foreground mt-3 max-w-2xl mx-auto">
-              node connects to standard RTSP/ONVIF cameras and integrates with your operational stack via webhooks. Contact us for specifics.
+              node uses its own cameras and its own network. It is not connected to your IT network or CCTV. Processing stays on site, with no cloud required.
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {["RTSP cameras", "ONVIF devices", "Webhook / API", "Dashboard portal", "Email alerts", "Custom integrations"].map((item) => (
+            {["Own cameras", "Own network", "On-site processing", "No cloud required", "Dashboard portal", "Email alerts"].map((item) => (
               <div key={item} className="rounded-xl border border-black/10 p-4 text-center text-sm font-medium">{item}</div>
             ))}
           </div>
@@ -110,7 +110,7 @@ export default function Product() {
             <div className="rounded-3xl bg-white p-8 shadow-sm">
               <h3 className="font-semibold mb-4">How node deploys</h3>
               <div className="space-y-3 text-sm text-muted-foreground">
-                <p>1. Camera feed capture (RTSP, ONVIF)</p>
+                <p>1. Capture from node's own cameras</p>
                 <p>2. On-device inference on edge hardware</p>
                 <p>3. Event alerts via webhook or email</p>
                 <p>4. Clip archive in encrypted local storage</p>
