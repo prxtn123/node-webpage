@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 
+/** Set to true to show the Praxis GB wordmark in the header again. */
+export const SHOW_PRAXIS_LOGO = false;
+
 export default function NavBar() {
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
@@ -28,11 +31,15 @@ export default function NavBar() {
             location.pathname === "/" ? "opacity-100" : "opacity-70 hover:opacity-100"
           }`}
         >
-          <img
-            src="/praxis-logo.png"
-            alt="Praxis GB"
-            className="h-10 w-auto sm:h-12 md:h-[117px]"
-          />
+          {SHOW_PRAXIS_LOGO ? (
+            <img
+              src="/praxis-logo.png"
+              alt="Praxis GB"
+              className="h-10 w-auto sm:h-12 md:h-[117px]"
+            />
+          ) : (
+            <span className="sr-only">Praxis GB</span>
+          )}
         </Link>
 
         <Link
