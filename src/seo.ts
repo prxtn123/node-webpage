@@ -21,6 +21,9 @@ const LEGACY_TITLE = "node | AI-Powered Logistics Safety";
 const LEGACY_DESCRIPTION =
   "AI-powered safety platform for logistics and supply chain. Prevent near misses, ensure compliance, and optimise workflows.";
 
+const homeDescription =
+  "Praxis GB builds computer vision for warehouse and logistics safety. node is its product, a standalone, self-contained system. It uses its own cameras and its own network. Processing stays on site, with no cloud required. It is not connected to your IT network or CCTV.";
+
 const organizationJsonLd: Record<string, unknown> = {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -36,19 +39,17 @@ const organizationJsonLd: Record<string, unknown> = {
     addressRegion: "England",
     addressCountry: "GB",
   },
-  description:
-    "Praxis GB builds computer vision applications that solve real-world problems, across industries, environments, and use cases.",
+  description: homeDescription,
 };
 
 const home: RouteSeo = {
-  title: "Praxis GB, on-site computer vision for UK logistics",
-  description:
-    "Praxis GB builds and runs edge computer vision systems in Greater Manchester. Video is processed on site. Our first product, node, detects warehouse safety risks.",
+  title: "Praxis GB, computer vision for warehouse and logistics safety",
+  description: homeDescription,
   canonical: `${SITE_ORIGIN}/`,
-  image: `${SITE_ORIGIN}/images/hero-praxis.jpg`,
+  image: `${SITE_ORIGIN}/images/hero-node.jpg`,
   imageWidth: 1920,
-  imageHeight: 1278,
-  imageAlt: "Praxis GB",
+  imageHeight: 1280,
+  imageAlt: "Warehouse floor",
   jsonLd: organizationJsonLd,
 };
 

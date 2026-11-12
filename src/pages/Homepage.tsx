@@ -1,333 +1,138 @@
 import { Link } from "react-router-dom";
+import { AlertTriangle, ArrowRight, BarChart2, ClipboardCheck } from "lucide-react";
 import NavBar from "@/components/NavBar";
 import { Footer } from "@/components/Footer";
-import { Flag, Server, Settings, Receipt } from "lucide-react";
 
-const WHY_ITEMS = [
+const whatNodeDoes = [
   {
-    icon: Flag,
-    title: "British-built and supported",
-    body: "Built in the UK for UK organisations, not retrofitted from US enterprise software.",
+    icon: AlertTriangle,
+    title: "Near misses",
+    body: "node flags a missing hi-vis vest, a pedestrian outside the walkway or a person too close to moving MHE, and alerts the supervisor while the risk is live.",
   },
   {
-    icon: Server,
-    title: "Edge-deployed",
-    body: "Processing happens on-site, not in the cloud. Footage never leaves your building unless an incident occurs.",
+    icon: ClipboardCheck,
+    title: "Evidence for audits",
+    body: "Every event is logged with a clip and timestamp, giving you an audit trail for internal and customer audits and for investigations.",
   },
   {
-    icon: Settings,
-    title: "No IT burden",
-    body: "We own the hardware, manage the system, and keep it running. Your team just uses it.",
+    icon: BarChart2,
+    title: "Safety score",
+    body: "A site-wide safety score and trends by shift and area, for daily huddles, shift handovers and SHEQ reviews.",
   },
-  {
-    icon: Receipt,
-    title: "Transparent pricing",
-    body: "No custom quotes, no hidden costs. One installation fee, one monthly subscription.",
-  },
+];
+
+const standalonePoints = [
+  "Its own cameras",
+  "Its own network",
+  "Processing stays on site",
+  "No cloud required",
+  "Not connected to your IT network or CCTV",
 ];
 
 export default function Homepage() {
   return (
-    <div className="min-h-screen bg-[#070809] text-white antialiased">
+    <div className="min-h-screen bg-background">
       <NavBar />
 
       <main>
-
-        {/* ─── HERO ─────────────────────────────────────────────────────── */}
-        <section className="relative min-h-screen overflow-hidden" aria-label="Hero">
-          {/* IMAGE: Full-bleed hero background — dark, moody wide-angle environment
-              (could be warehouse, retail, construction, healthcare, transport).
-              Desaturated, overlaid with dark gradient so white text remains legible.
-              Dimensions: 1920x1080 min. */}
-          <div
-            aria-hidden
-            className="pointer-events-none absolute inset-0"
-          >
+        <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+          <div className="absolute inset-0">
             <img
-              src="/images/hero-praxis.jpg"
+              src="/images/hero-node.jpg"
               alt=""
               className="h-full w-full object-cover"
               loading="eager"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-[#070809]/70 via-[#070809]/60 to-[#070809]" />
-          </div>
-          {/* scanline grid */}
-          <div
-            aria-hidden
-            className="pointer-events-none absolute inset-0"
-            style={{
-              backgroundImage:
-                "linear-gradient(to bottom, transparent calc(100% - 1px), rgba(255,255,255,0.026) calc(100% - 1px))",
-              backgroundSize: "100% 72px",
-            }}
-          />
-          {/* vertical column break */}
-          <div
-            aria-hidden
-            className="pointer-events-none absolute inset-y-0 left-[58%] hidden w-px bg-white/[0.05] lg:block"
-          />
-
-          <div className="relative mx-auto grid max-w-[1200px] min-h-screen grid-cols-1 items-center gap-8 px-6 pb-16 pt-44 md:px-10 md:pt-48 lg:grid-cols-[1fr_400px] lg:pt-44">
-            {/* Left */}
-            <div className="flex flex-col justify-center space-y-10">
-              <p className="text-[10px] font-semibold uppercase tracking-[0.44em] text-blue-400">
-                Greater Manchester · Computer vision
-              </p>
-              <h1 className="text-[clamp(3.2rem,7.4vw,6.8rem)] font-bold leading-[0.88] tracking-[-0.035em] text-white">
-                Computer Vision.<br />
-                Any Problem.<br />
-                Any Industry.
-              </h1>
-              <p className="max-w-[44ch] text-lg leading-8 text-white/55 md:text-xl">
-                Praxis GB builds computer vision applications that solve real-world problems, across industries, environments, and use cases. We handle the technology so you can focus on the outcome.
-              </p>
-              <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
-                <a
-                  href="https://nodehub.uk/node"
-                  className="inline-flex items-center justify-center rounded-sm bg-white px-8 py-4 text-sm font-semibold tracking-wide text-black transition-all hover:bg-white/90 active:scale-95"
-                >
-                  See node →
-                </a>
-                <span className="text-sm text-white/30">
-                  Edge-deployed. No cloud required.
-                </span>
-              </div>
-            </div>
-
-            {/* Right — desktop asymmetric panel */}
-            <div className="hidden flex-col gap-5 lg:flex">
-              <div
-                className="rounded-xl p-8"
-                style={{
-                  background: "rgba(255,255,255,0.035)",
-                  border: "1px solid rgba(255,255,255,0.08)",
-                }}
-              >
-                <p className="text-[10px] font-semibold uppercase tracking-[0.4em] text-white/35">
-                  Our edge promise
-                </p>
-                <h2 className="mt-5 text-2xl font-semibold leading-snug tracking-tight text-white">
-                  On-site AI that never depends on the cloud.
-                </h2>
-                <p className="mt-4 text-sm leading-7 text-white/50">
-                  We train the models, manage the platform, and hand you a working system.
-                  Footage stays inside the building unless a verified incident occurs.
-                </p>
-              </div>
-              <div className="grid grid-cols-2 gap-5">
-                <div
-                  className="rounded-xl p-6"
-                  style={{
-                    background: "rgba(255,255,255,0.022)",
-                    border: "1px solid rgba(255,255,255,0.06)",
-                  }}
-                >
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.35em] text-white/30">Applied across</p>
-                  <p className="mt-4 text-xl font-semibold tracking-tight text-white">Any sector</p>
-                </div>
-                <div
-                  className="rounded-xl p-6"
-                  style={{
-                    background: "rgba(255,255,255,0.022)",
-                    border: "1px solid rgba(255,255,255,0.06)",
-                  }}
-                >
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.35em] text-white/30">Built in</p>
-                  <p className="mt-4 text-xl font-semibold tracking-tight text-white">The UK</p>
-                </div>
-              </div>
-            </div>
+            <div className="absolute inset-0 bg-black/65" />
           </div>
 
-          <div aria-hidden className="absolute inset-x-0 bottom-0 h-px bg-white/[0.06]" />
-        </section>
-
-        {/* ─── WHAT WE DO ───────────────────────────────────────────────── */}
-        <section
-          className="border-t border-white/[0.06] px-6 py-28 md:px-10"
-          aria-label="What we do"
-        >
-          <div className="mx-auto grid max-w-[1200px] gap-12 lg:grid-cols-2">
-            <div className="space-y-5">
-              <p className="text-[10px] font-semibold uppercase tracking-[0.44em] text-blue-400">
-                What we do
-              </p>
-              <h2 className="text-4xl font-bold leading-tight tracking-[-0.025em] text-white md:text-5xl">
-                Computer vision that works.
-              </h2>
-              {/* Edge device / camera in a live environment */}
-              <div className="mt-6 aspect-[3/2] w-full overflow-hidden rounded-xl border border-white/[0.06]">
-                <img
-                  src="/images/edge-device.jpg"
-                  alt="Security camera deployed on-site"
-                  className="h-full w-full object-cover"
-                  loading="lazy"
-                />
-              </div>
+          <div className="relative z-10 max-w-[980px] mx-auto px-6 pt-20 pb-32 text-center">
+            <div className="mb-8">
+              <img
+                src="/node-logo.png"
+                alt=".node. Computer Vision. Built For Operators."
+                className="mx-auto h-20 md:h-28 lg:h-36 w-auto"
+              />
             </div>
-            <p className="self-end text-lg leading-9 text-white/55">
-              Praxis GB builds computer vision applications for real-world problems. We design,
-              train, and deploy the models, running on our hardware, on-site, with no cloud
-              dependency required. Whatever cameras can see, we can build a system to understand it.
+
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-[1.1] tracking-tight mb-6">
+              Warehouse safety, seen before it happens.
+            </h1>
+
+            <p className="text-xl md:text-2xl text-white/70 font-normal max-w-2xl mx-auto mb-10 leading-relaxed">
+              Praxis GB builds computer vision for warehouse and logistics safety. node is its product.
             </p>
+
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <Link
+                to="/node"
+                className="inline-flex items-center gap-2 text-xl text-blue-400 hover:text-blue-300 transition-colors"
+              >
+                See node
+                <ArrowRight className="h-5 w-5" />
+              </Link>
+              <a
+                href="#contact"
+                className="inline-flex items-center gap-2 text-xl text-white/80 hover:text-white transition-colors"
+              >
+                Request a demo
+                <ArrowRight className="h-5 w-5" />
+              </a>
+            </div>
+          </div>
+
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50">
+            <div className="w-6 h-10 rounded-full border-2 border-white/30 flex items-start justify-center p-2">
+              <div className="w-1 h-2 bg-white/50 rounded-full animate-bounce" />
+            </div>
           </div>
         </section>
 
-        {/* ─── WHY PRAXIS GB ────────────────────────────────────────────── */}
-        <section
-          className="border-t border-white/[0.06] px-6 py-28 md:px-10"
-          aria-label="Why Praxis GB"
-        >
-          <div className="mx-auto max-w-[1200px] space-y-16">
-            <div>
-              <p className="text-[10px] font-semibold uppercase tracking-[0.44em] text-blue-400">Why Praxis GB</p>
-              <h2 className="mt-4 text-4xl font-bold tracking-[-0.025em] text-white md:text-5xl">
-                Built different.
+        <section id="what-node-does" className="py-32 bg-white" aria-label="What node does">
+          <div className="max-w-[980px] mx-auto px-6">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <p className="text-sm font-medium text-blue-500 mb-4">What node does</p>
+              <h2 className="text-4xl md:text-5xl font-semibold text-foreground tracking-tight">
+                Leading indicators for site safety.
               </h2>
             </div>
-            <div
-              className="grid border border-white/[0.06]"
-              style={{ gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))" }}
-            >
-              {WHY_ITEMS.map(({ icon: Icon, title, body }) => (
-                <div
-                  key={title}
-                  className="space-y-4 border-r border-b border-white/[0.06] p-8 last:border-r-0"
-                  style={{
-                    background: "rgba(255,255,255,0.018)",
-                  }}
-                >
-                  <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/[0.06]">
-                    <Icon className="h-4 w-4 text-blue-400" strokeWidth={1.5} />
-                  </div>
-                  <h3 className="text-sm font-semibold text-white">{title}</h3>
-                  <p className="text-sm leading-6 text-white/45">{body}</p>
-                </div>
+
+            <div className="grid gap-5 md:grid-cols-3">
+              {whatNodeDoes.map((item) => (
+                <article key={item.title} className="p-6 rounded-2xl bg-[#f5f5f7]">
+                  <item.icon className="h-6 w-6 text-foreground mb-3" />
+                  <h3 className="font-semibold text-foreground mb-2">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{item.body}</p>
+                </article>
               ))}
             </div>
           </div>
         </section>
 
-        {/* ─── OUR PRODUCTS ─────────────────────────────────────────────── */}
-        <section
-          className="border-t border-white/[0.06] px-6 py-28 md:px-10"
-          aria-label="Our products"
-        >
-          <div className="mx-auto max-w-[1200px] space-y-14">
-            <div>
-              <p className="text-[10px] font-semibold uppercase tracking-[0.44em] text-blue-400">Our products</p>
-              <h2 className="mt-4 text-4xl font-bold tracking-[-0.025em] text-white md:text-5xl">
-                What we ship.
+        <section id="standalone" className="py-32 bg-[#f5f5f7]" aria-label="Why standalone">
+          <div className="max-w-[980px] mx-auto px-6">
+            <div className="text-center max-w-3xl mx-auto">
+              <p className="text-sm font-medium text-blue-500 mb-4">Why standalone</p>
+              <h2 className="text-4xl md:text-5xl font-semibold text-foreground tracking-tight mb-6">
+                A standalone, self-contained system.
               </h2>
-            </div>
-            <div className="grid gap-5 md:grid-cols-2">
-              {/* node flagship */}
-              <div
-                className="flex flex-col justify-between rounded-xl p-10"
-                style={{
-                  background: "rgba(255,255,255,0.04)",
-                  border: "1px solid rgba(255,255,255,0.1)",
-                }}
-              >
-                <div className="space-y-6">
-                  <div className="flex items-start justify-between">
-                    <div>
-                      <p className="text-[10px] font-semibold uppercase tracking-[0.44em] text-blue-400">Flagship product</p>
-                      <img
-                        src="/node-logo-compact.png"
-                        alt=".node"
-                        className="mt-3 h-16 w-auto"
-                      />
-                    </div>
-                    <span className="rounded-full bg-blue-500/10 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-widest text-blue-400">
-                      Live
-                    </span>
-                  </div>
-                  <p className="text-sm leading-7 text-white/55">
-                    Live safety monitoring for warehouses and logistics centres. node is a standalone,
-                    self-contained system with its own cameras and its own network. It prevents near misses,
-                    supports compliance with an audit trail, and generates audit-ready evidence on the edge,
-                    with no cloud required. It is not connected to your IT network or CCTV.
-                  </p>
-                  <div className="space-y-2.5 border-t border-white/[0.07] pt-6">
-                    <p className="text-sm text-white/40"><span className="text-white/70">90%</span> detection accuracy in real operations.</p>
-                    <p className="text-sm text-white/40"><span className="text-white/70">&lt;100ms</span> alert turnaround, on-device.</p>
-                  </div>
-                  {/* node dashboard screenshot */}
-                  <div className="mt-6 aspect-video w-full overflow-hidden rounded-lg border border-white/[0.06]">
-                    <img
-                      src="/images/dashboard.jpg"
-                      alt="Analytics dashboard showing live detection data"
-                      className="h-full w-full object-cover"
-                      loading="lazy"
-                    />
-                  </div>
-                </div>
-                <Link
-                  to="/node"
-                  className="mt-10 inline-flex w-fit items-center rounded-sm bg-white px-7 py-3.5 text-sm font-semibold text-black transition-all hover:bg-white/90"
-                >
-                  Learn more →
-                </Link>
-              </div>
-
-              {/* placeholder */}
-              <div
-                className="flex flex-col justify-center rounded-xl p-10"
-                style={{ border: "1px dashed rgba(255,255,255,0.1)" }}
-              >
-                <p className="text-[10px] font-semibold uppercase tracking-[0.44em] text-white/25">Coming soon</p>
-                <h3 className="mt-5 text-3xl font-bold tracking-tight text-white/35">Next product</h3>
-                <p className="mt-5 text-sm leading-7 text-white/28">
-                  More edge AI applications in development. We are expanding the Praxis GB suite
-                  into new industries and new problem spaces.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ─── WHO WE WORK WITH + FOUNDER NOTE ─────────────────────────── */}
-        <section
-          className="border-t border-white/[0.06] px-6 py-28 md:px-10"
-          aria-label="About"
-        >
-          <div className="mx-auto grid max-w-[1200px] gap-6 lg:grid-cols-2">
-            <div
-              className="rounded-xl p-10"
-              style={{
-                background: "rgba(255,255,255,0.025)",
-                border: "1px solid rgba(255,255,255,0.07)",
-              }}
-            >
-              <p className="text-[10px] font-semibold uppercase tracking-[0.44em] text-blue-400">Who we work with</p>
-              <h3 className="mt-5 text-2xl font-semibold tracking-tight text-white">
-                Any sector. Any environment.
-              </h3>
-              <p className="mt-5 text-sm leading-7 text-white/50">
-                We work with organisations that have a real operational problem and cameras that
-                can see it. From safety and compliance to monitoring, efficiency, and quality,
-                if computer vision can help, we can build and deploy it.
+              <p className="text-xl text-muted-foreground leading-relaxed">
+                node uses its own cameras and its own network. Processing stays on site, with no cloud required. It is not connected to your IT network or CCTV.
               </p>
             </div>
 
-            <div
-              className="rounded-xl p-10"
-              style={{
-                background: "rgba(255,255,255,0.018)",
-                border: "1px solid rgba(255,255,255,0.07)",
-              }}
-            >
-              <p className="text-[10px] font-semibold uppercase tracking-[0.44em] text-white/30">Founder note</p>
-              <blockquote className="mt-6 text-[1.05rem] leading-8 text-white/58 italic">
-                "Praxis GB was founded on the belief that computer vision should not require
-                enterprise budgets or specialist in-house teams. We build the models, manage the
-                infrastructure, and hand you a system that works, whatever problem you need solved."
-              </blockquote>
-            </div>
+            <ul className="mt-12 flex flex-wrap justify-center gap-3">
+              {standalonePoints.map((point) => (
+                <li
+                  key={point}
+                  className="px-4 py-2 rounded-full bg-black/5 text-sm font-medium text-foreground"
+                >
+                  {point}
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
-
       </main>
 
       <Footer />

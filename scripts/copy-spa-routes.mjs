@@ -24,7 +24,11 @@ const prerenderRoutes = [
   {
     url: "/",
     outPath: indexPath,
-    mustInclude: ["Computer Vision.", "Greater Manchester", "its own cameras and its own network"],
+    mustInclude: [
+      "Warehouse safety, seen before it happens.",
+      "Praxis GB builds computer vision for warehouse and logistics safety",
+      "its own cameras and its own network",
+    ],
   },
   {
     url: "/node",
