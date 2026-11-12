@@ -21,9 +21,11 @@ export const HeroSection = () => {
         {/* Logo */}
         <div className="mb-8">
           <img
-            src="/node-logo.png"
-            alt=".node. Computer Vision. Built For Operators."
-            className="mx-auto h-20 md:h-28 lg:h-36 w-auto"
+            src="/node-lockup-horizontal-transparent-dark.png"
+            alt="node by Praxis GB"
+            width={1811}
+            height={306}
+            className="mx-auto h-auto w-full max-w-[19rem] sm:max-w-[26rem] md:max-w-[30rem] lg:max-w-[34rem]"
           />
         </div>
 

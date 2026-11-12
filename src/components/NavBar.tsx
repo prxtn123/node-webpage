@@ -49,9 +49,11 @@ export default function NavBar() {
           }`}
         >
           <img
-            src="/node-logo-compact.png"
-            alt=".node"
-            className="h-[20px] w-auto"
+            src="/node-lockup-horizontal-transparent-dark.png"
+            alt="node by Praxis GB"
+            width={1811}
+            height={306}
+            className="h-7 w-auto md:h-8"
           />
         </Link>
       </div>
