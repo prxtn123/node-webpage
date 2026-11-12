@@ -2,6 +2,24 @@ import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { pathToFileURL } from "node:url";
 
+const CSP =
+  "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' mailto:";
+const REFERRER = "strict-origin-when-cross-origin";
+
+function assertSecurityMeta(html, label) {
+  const csp = `<meta http-equiv="Content-Security-Policy" content="${CSP}" />`;
+  const referrer = `<meta name="referrer" content="${REFERRER}" />`;
+  if (!html.includes(csp)) {
+    throw new Error(`${label} is missing the Content-Security-Policy meta tag`);
+  }
+  if (!html.includes(referrer)) {
+    throw new Error(`${label} is missing the referrer policy meta tag`);
+  }
+  if (html.includes("unsafe-eval")) {
+    throw new Error(`${label} CSP allows unsafe-eval`);
+  }
+}
+
 const distDir = join(process.cwd(), "dist");
 const indexPath = join(distDir, "index.html");
 const serverEntry = join(process.cwd(), ".ssr", "entry-server.js");
@@ -126,6 +144,7 @@ function applyDocument(shell, appHtml, seo) {
 }
 
 const shell = readFileSync(indexPath, "utf8");
+assertSecurityMeta(shell, "Built index.html");
 
 for (const route of shellRoutes) {
   const routeDir = join(distDir, route);
@@ -149,6 +168,7 @@ for (const route of prerenderRoutes) {
   if (seo.canonical && !page.includes(`href="${seo.canonical}"`)) {
     throw new Error(`Prerender of ${route.url} is missing its canonical URL`);
   }
+  assertSecurityMeta(page, `Prerender of ${route.url}`);
   mkdirSync(join(route.outPath, ".."), { recursive: true });
   writeFileSync(route.outPath, page, "utf8");
   console.log(`Prerendered ${route.url} -> ${route.outPath}`);

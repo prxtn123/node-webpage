@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 170" fill="none">
-  <!-- Teal dot -->
-  <circle cx="32" cy="130" r="26" fill="#5CEDB5"/>
-  <!-- .node text -->
-  <text x="0" y="142" font-family="'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-weight="800" font-size="168" fill="white" letter-spacing="-5">
-    <tspan dx="58">node</tspan>
-  </text>
-</svg>
