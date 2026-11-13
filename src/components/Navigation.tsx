@@ -61,16 +61,20 @@ export const Navigation = () => {
       <div className="max-w-[980px] mx-auto px-6">
         <div className="flex items-center justify-between h-12">
           {/* Logo */}
-          <button 
-            onClick={() => navigate("/node")} 
-            className="flex items-center gap-2"
+          <button
+            onClick={() => navigate("/node")}
+            className="flex shrink-0 items-center"
           >
             <img
-              src="/node-logo-compact.png"
-              alt=".node"
-              className={`h-5 w-auto transition-all ${
-                isScrolled || isLightPage ? "invert" : ""
-              }`}
+              src={
+                isScrolled || isLightPage
+                  ? "/node-lockup-horizontal-transparent-light.png"
+                  : "/node-lockup-horizontal-transparent-dark.png"
+              }
+              alt="node by Praxis GB"
+              width={1811}
+              height={306}
+              className="h-[17px] w-auto shrink-0 lg:h-7"
             />
           </button>
 
