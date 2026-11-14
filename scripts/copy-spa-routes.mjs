@@ -46,7 +46,7 @@ const prerenderRoutes = [
       "Warehouse safety, seen before it happens.",
       "Praxis GB builds computer vision for warehouse and logistics safety",
       "its own cameras and its own network",
-      "We're on a mission to make warehouses accident-free workplaces.",
+      "We're on a mission to make workplaces accident-free.",
     ],
   },
   {

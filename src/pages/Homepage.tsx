@@ -97,7 +97,7 @@ export default function Homepage() {
                 Our mission
               </p>
               <h2 className="text-4xl md:text-5xl font-semibold text-foreground tracking-tight mb-6">
-                We're on a mission to make warehouses accident-free workplaces.
+                We're on a mission to make workplaces accident-free.
               </h2>
               <p className="text-xl text-muted-foreground leading-relaxed">
                 node is standalone. It uses its own cameras and its own network, and processes on site with no cloud required.
