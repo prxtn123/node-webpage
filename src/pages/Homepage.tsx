@@ -90,6 +90,25 @@ export default function Homepage() {
           </div>
         </section>
 
+        <section id="mission" className="py-32 bg-[#f5f5f7]" aria-label="Our mission">
+          <div className="max-w-[980px] mx-auto px-6">
+            <div className="text-center max-w-3xl mx-auto">
+              <p className="text-sm font-medium uppercase tracking-wide text-blue-500 mb-4">
+                Our mission
+              </p>
+              <h2 className="text-4xl md:text-5xl font-semibold text-foreground tracking-tight mb-6">
+                We're on a mission to make warehouses accident-free workplaces.
+              </h2>
+              <p className="text-xl text-muted-foreground leading-relaxed">
+                node is standalone. It uses its own cameras and its own network, and processes on site with no cloud required.
+              </p>
+              <p className="text-xl text-muted-foreground leading-relaxed mt-4">
+                It is not connected to your IT network or CCTV, and it flags near misses early.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <section id="what-node-does" className="py-32 bg-white" aria-label="What node does">
           <div className="max-w-[980px] mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-16">
