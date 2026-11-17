@@ -47,6 +47,7 @@ const prerenderRoutes = [
       "Praxis GB builds computer vision for warehouse and logistics safety",
       "its own cameras and its own network",
       "We're on a mission to make workplaces accident-free.",
+      "In partnership with",
     ],
   },
   {
@@ -56,6 +57,7 @@ const prerenderRoutes = [
       "not in the accident book.",
       "Most sites are live within 2-4 weeks",
       "its own cameras and its own network",
+      "In partnership with",
     ],
   },
   {
