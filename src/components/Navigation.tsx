@@ -7,6 +7,7 @@ const navLinks: { name: string; target?: string; path?: string }[] = [
   { name: "Home", path: "/" },
   { name: "Product", path: "/product" },
   { name: "About", path: "/about" },
+  { name: "Our Mission", path: "/missionzero" },
   { name: "Resources", path: "/resources" },
   { name: "How it works", path: "/how-it-works" },
   { name: "Contact", path: "/contact" },
@@ -58,11 +59,11 @@ export const Navigation = () => {
         isScrolled || isLightPage ? "nav-apple border-b border-black/5" : "bg-transparent"
       }`}
     >
-      <div className="max-w-[980px] mx-auto px-6">
-        <div className="flex items-center justify-between h-12">
+      <div className="mx-auto max-w-[1200px] px-4 md:px-5 lg:px-6">
+        <div className="flex h-12 items-center justify-between gap-2">
           {/* Logo */}
           <button
-            onClick={() => navigate("/node")}
+            onClick={() => navigate("/")}
             className="flex shrink-0 items-center"
           >
             <img
@@ -79,27 +80,39 @@ export const Navigation = () => {
           </button>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <button
-                key={link.name}
-                onClick={() => handleNavClick(link)}
-                className={`text-xs font-normal transition-colors ${
-                  isScrolled || isLightPage
-                    ? "text-foreground/80 hover:text-foreground" 
-                    : "text-white/80 hover:text-white"
-                }`}
-              >
-                {link.name}
-              </button>
-            ))}
+          <div className="hidden md:flex items-center gap-x-2 md:gap-x-2.5 lg:gap-x-4 xl:gap-x-6">
+            {navLinks.map((link) => {
+              const isActive = link.path === location.pathname;
+              return (
+                <button
+                  key={link.name}
+                  type="button"
+                  onClick={() => handleNavClick(link)}
+                  aria-current={isActive ? "page" : undefined}
+                  className={`whitespace-nowrap text-xs transition-colors ${
+                    isActive ? "font-medium" : "font-normal"
+                  } ${
+                    isScrolled || isLightPage
+                      ? isActive
+                        ? "text-foreground"
+                        : "text-foreground/80 hover:text-foreground"
+                      : isActive
+                        ? "text-white"
+                        : "text-white/80 hover:text-white"
+                  }`}
+                >
+                  {link.name}
+                </button>
+              );
+            })}
           </div>
 
           {/* CTAs */}
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden shrink-0 md:flex items-center gap-2 lg:gap-4">
             <button
+              type="button"
               onClick={() => navigate("/contact")}
-              className={`text-xs font-normal transition-colors ${
+              className={`whitespace-nowrap text-xs font-normal transition-colors ${
                 isScrolled || isLightPage
                   ? "text-blue-500 hover:text-blue-600"
                   : "text-blue-400 hover:text-blue-300"
@@ -110,7 +123,7 @@ export const Navigation = () => {
             {/* Sign In - links to the dashboard app */}
             <a
               href={APP_URL}
-              className={`text-xs font-medium px-3 py-1.5 rounded-full transition-all ${
+              className={`whitespace-nowrap text-xs font-medium px-3 py-1.5 rounded-full transition-all ${
                 isScrolled || isLightPage
                   ? "bg-foreground text-background hover:bg-foreground/85"
                   : "bg-white text-black hover:bg-white/85"
@@ -133,17 +146,26 @@ export const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 nav-apple border-t border-black/5">
+          <div className="absolute top-full left-0 right-0 border-t border-black/5 bg-white md:hidden">
             <div className="max-w-[980px] mx-auto px-6 py-4 flex flex-col gap-3">
-              {navLinks.map((link) => (
-                <button
-                  key={link.name}
-                  onClick={() => handleNavClick(link)}
-                  className="text-sm text-foreground/80 hover:text-foreground py-2 transition-colors text-left"
-                >
-                  {link.name}
-                </button>
-              ))}
+              {navLinks.map((link) => {
+                const isActive = link.path === location.pathname;
+                return (
+                  <button
+                    key={link.name}
+                    type="button"
+                    onClick={() => handleNavClick(link)}
+                    aria-current={isActive ? "page" : undefined}
+                    className={`py-2 text-left text-sm transition-colors ${
+                      isActive
+                        ? "font-medium text-foreground"
+                        : "text-foreground/80 hover:text-foreground"
+                    }`}
+                  >
+                    {link.name}
+                  </button>
+                );
+              })}
               <button
                 onClick={() => { setIsMobileMenuOpen(false); navigate("/contact"); }}
                 className="text-sm text-blue-500 hover:text-blue-600 py-2 transition-colors text-left"

@@ -36,6 +36,7 @@ const shellRoutes = [
   "terms",
   "gdpr",
   "how-it-works",
+  "missionzero",
 ];
 
 const prerenderRoutes = [
@@ -43,10 +44,9 @@ const prerenderRoutes = [
     url: "/",
     outPath: indexPath,
     mustInclude: [
-      "Warehouse safety, seen before it happens.",
-      "Praxis GB builds computer vision for warehouse and logistics safety",
+      "not in the accident book.",
+      "Most sites are live within 2-4 weeks",
       "its own cameras and its own network",
-      "We're on a mission to make workplaces accident-free.",
       "In partnership with",
     ],
   },
@@ -69,6 +69,14 @@ const prerenderRoutes = [
       "hosted on GitHub Pages (GitHub, Inc.), which processes standard server data such as IP addresses when pages are served",
       "GitHub, Inc. is in the United States, so that data is transferred to the US.",
       "Privacy questions and data rights requests go to Tom Noble",
+      "provided by IONOS. Newsletters are sent from that mailbox by BCC",
+    ],
+  },
+  {
+    url: "/missionzero",
+    outPath: join(distDir, "missionzero", "index.html"),
+    mustInclude: [
+      "Accident-free workplaces, by cutting the accident frequency rate.",
     ],
   },
 ];
@@ -178,5 +186,5 @@ for (const route of prerenderRoutes) {
 }
 
 console.log(
-  `Copied SPA shell for routes: ${shellRoutes.filter((route) => route !== "node" && route !== "privacy").join(", ")}`,
+  `Copied SPA shell for routes: ${shellRoutes.filter((route) => route !== "node" && route !== "privacy" && route !== "missionzero").join(", ")}`,
 );

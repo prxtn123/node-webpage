@@ -5,7 +5,6 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect, useState, type ReactNode } from "react";
 import DocumentHead from "./components/DocumentHead";
-import Homepage from "./pages/Homepage";
 import Index from "./pages/Index";
 import Product from "./pages/Product";
 import About from "./pages/About";
@@ -14,6 +13,7 @@ import Contact from "./pages/Contact";
 import Careers from "./pages/Careers";
 import Legal from "./pages/Legal";
 import HowItWorks from "./pages/HowItWorks";
+import MissionZero from "./pages/MissionZero";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -55,7 +55,7 @@ export function AppRoutes() {
       <ScrollToTop />
       <DocumentHead />
       <Routes>
-          <Route path="/" element={<Homepage />} />
+          <Route path="/" element={<Index />} />
           <Route path="/node" element={<Index />} />
           <Route path="/product" element={<Product />} />
           <Route path="/about" element={<About />} />
@@ -66,6 +66,7 @@ export function AppRoutes() {
           <Route path="/terms" element={<Legal />} />
           <Route path="/gdpr" element={<Legal />} />
           <Route path="/how-it-works" element={<HowItWorks />} />
+          <Route path="/missionzero" element={<MissionZero />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
