@@ -70,6 +70,7 @@ const prerenderRoutes = [
       "hosted on GitHub Pages (GitHub, Inc.), which processes standard server data such as IP addresses when pages are served",
       "GitHub, Inc. is in the United States, so that data is transferred to the US.",
       "Privacy questions and data rights requests go to Tom Noble",
+      "provided by IONOS. Newsletters are sent from that mailbox by BCC",
     ],
   },
   {
