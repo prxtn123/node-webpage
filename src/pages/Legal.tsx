@@ -30,7 +30,6 @@ export default function Legal() {
             </p>
             <ul className="list-disc pl-6 mb-6 space-y-2 text-gray-700">
               <li><strong>Contact and enquiry data:</strong> the contact form does not send your details to our servers. It opens your own email program with a message addressed to hello@praxisgb.com. That message can include your name, company, email address, phone number and what you wrote. Nothing is sent unless you send the email. You can also email hello@praxisgb.com, or call the number on the contact page, yourself.</li>
-              <li><strong>Mission Zero newsletter:</strong> the name, email address, company and optional role you send when you email us to join. See Mission Zero newsletter below.</li>
               <li><strong>Hosting logs:</strong> the website is hosted on GitHub Pages (GitHub, Inc.), which processes standard server data such as IP addresses when pages are served. The host can also record the page requested and the time. This website does not add its own logging on top of that.</li>
               <li><strong>Fonts:</strong> the typeface (Inter) is a file on this website. Your browser loads it from nodehub.uk. Visiting the site does not send your IP address to a font provider.</li>
             </ul>
@@ -44,31 +43,21 @@ export default function Legal() {
             <h3 className="text-xl font-semibold text-black mt-8 mb-4">How we use your data</h3>
             <ul className="list-disc pl-6 mb-8 space-y-2 text-gray-700">
               <li>To read and reply to emails and calls you choose to send us, including demo requests.</li>
-              <li>To send you the Mission Zero newsletter and occasional news about node, if you email us to join.</li>
               <li>The host uses connection logs to deliver the site and to protect it from abuse.</li>
             </ul>
             <p className="text-gray-700 leading-relaxed mb-8">
-              This website does not measure how visitors use the pages. The Mission Zero newsletter is described below.
+              This website does not measure how visitors use the pages.
             </p>
-
-            <h3 className="text-xl font-semibold text-black mt-8 mb-4">Mission Zero newsletter</h3>
-            <ul className="list-disc pl-6 mb-8 space-y-2 text-gray-700">
-              <li><strong>What we collect:</strong> the name, email address, company and optional role you send when you email us to join.</li>
-              <li><strong>Why:</strong> to send you the Mission Zero newsletter and occasional news about node.</li>
-              <li><strong>Legal basis:</strong> your consent, which you can withdraw at any time by replying 'unsubscribe' or emailing <a href="mailto:hello@praxisgb.com" className="text-blue-600 hover:text-blue-700">hello@praxisgb.com</a>. Every newsletter includes this option.</li>
-              <li><strong>How it's held:</strong> in the hello@praxisgb.com mailbox, provided by IONOS. Newsletters are sent from that mailbox by BCC, so recipients don't see each other's addresses.</li>
-              <li><strong>How long:</strong> until you unsubscribe, then your details are deleted.</li>
-              <li><strong>Confirmation:</strong> we reply to confirm before adding you.</li>
-              <li><strong>Rights requests:</strong> use the route already in this notice. Privacy questions and data rights requests go to Tom Noble.</li>
-            </ul>
+            <p className="text-gray-700 leading-relaxed mb-8">
+              People who email <a href="mailto:hello@praxisgb.com" className="text-blue-600 hover:text-blue-700">hello@praxisgb.com</a> to join node Mission Zero may receive occasional node Mission Zero updates and can ask to be removed at any time.
+            </p>
 
             <h3 className="text-xl font-semibold text-black mt-8 mb-4">Legal basis for processing</h3>
             <ul className="list-disc pl-6 mb-8 space-y-2 text-gray-700">
               <li><strong>Legitimate interests:</strong> replying to enquiries you send us, and the host delivering the site and protecting it. We balance this against your rights.</li>
-              <li><strong>Consent:</strong> sending you the Mission Zero newsletter and occasional news about node. You can withdraw that consent at any time by replying 'unsubscribe' or emailing hello@praxisgb.com. Every newsletter includes this option.</li>
             </ul>
             <p className="text-gray-700 leading-relaxed mb-8">
-              The website does not ask you to consent to cookies, because it does not use cookies or analytics. Joining the Mission Zero newsletter does ask for your consent.
+              The website does not ask you to consent to cookies, because it does not use cookies or analytics.
             </p>
 
             <h3 className="text-xl font-semibold text-black mt-8 mb-4">Who we share your data with</h3>
@@ -78,7 +67,6 @@ export default function Legal() {
             <ul className="list-disc pl-6 mb-8 space-y-2 text-gray-700">
               <li>GitHub Pages (GitHub, Inc.) hosts the website, so loading a page means that host receives the connection data described above. GitHub, Inc. is in the United States, so that data is transferred to the US.</li>
               <li>If you send the contact email, it goes through your email provider to the hello@praxisgb.com mailbox. The form is not passed to any other service.</li>
-              <li>Mission Zero newsletter details are held in the hello@praxisgb.com mailbox, provided by IONOS. Newsletters are sent from that mailbox by BCC, so recipients don't see each other's addresses.</li>
               <li>We may share information with legal authorities when the law requires it.</li>
             </ul>
 
@@ -87,7 +75,7 @@ export default function Legal() {
               The website does not keep a copy of the contact form. It does not keep analytics records or cookie records, because it does not use them.
             </p>
             <p className="text-gray-700 leading-relaxed mb-8">
-              Enquiry emails are kept for up to 24 months after our last contact, then deleted, unless they become part of a customer relationship. Mission Zero newsletter details are kept until you unsubscribe, then deleted.
+              Enquiry emails are kept for up to 24 months after our last contact, then deleted, unless they become part of a customer relationship.
             </p>
 
             <h3 className="text-xl font-semibold text-black mt-8 mb-4">Your rights under UK GDPR</h3>

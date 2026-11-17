@@ -69,14 +69,17 @@ const prerenderRoutes = [
       "hosted on GitHub Pages (GitHub, Inc.), which processes standard server data such as IP addresses when pages are served",
       "GitHub, Inc. is in the United States, so that data is transferred to the US.",
       "Privacy questions and data rights requests go to Tom Noble",
-      "provided by IONOS. Newsletters are sent from that mailbox by BCC",
+      "to join node Mission Zero may receive occasional node Mission Zero updates and can ask to be removed at any time.",
     ],
   },
   {
     url: "/missionzero",
     outPath: join(distDir, "missionzero", "index.html"),
     mustInclude: [
-      "Accident-free workplaces, by cutting the accident frequency rate.",
+      "node Mission Zero",
+      "every workplace in the world",
+      "Everyone home safe.",
+      "93% accuracy",
     ],
   },
 ];

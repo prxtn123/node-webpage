@@ -71,10 +71,10 @@ const privacy: RouteSeo = {
 };
 
 const missionZeroDescription =
-  "Mission Zero is node's aim: accident-free workplaces, reached by cutting the accident frequency rate. Join us.";
+  "It's our mission to make every workplace in the world accident-free. node Mission Zero.";
 
 const missionZero: RouteSeo = {
-  title: "Mission Zero | node by Praxis GB",
+  title: "node Mission Zero | node by Praxis GB",
   description: missionZeroDescription,
   canonical: `${SITE_ORIGIN}/missionzero`,
   image: `${SITE_ORIGIN}/mission-zero-og.png`,
@@ -84,7 +84,7 @@ const missionZero: RouteSeo = {
   jsonLd: {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Mission Zero",
+    name: "node Mission Zero",
     url: `${SITE_ORIGIN}/missionzero`,
     description: missionZeroDescription,
     isPartOf: {
