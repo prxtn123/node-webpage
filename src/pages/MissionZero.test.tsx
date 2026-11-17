@@ -151,13 +151,10 @@ describe("Mission Zero form", () => {
     expect(document.body.textContent).not.toMatch(/XERO/);
   });
 
-  it("marks Our Mission as the current page", () => {
+  it("marks the Mission Zero wordmark as the current page", () => {
     renderPage();
-    const links = screen.getAllByRole("button", { name: "Our Mission" });
-    expect(links.length).toBeGreaterThan(0);
-    for (const link of links) {
-      expect(link).toHaveAttribute("aria-current", "page");
-    }
+    expect(screen.getByRole("link", { name: "Mission Zero" })).toHaveAttribute("aria-current", "page");
+    expect(screen.getByRole("link", { name: "node" })).not.toHaveAttribute("aria-current");
   });
 });
 
@@ -172,5 +169,14 @@ describe("Mission Zero SEO", () => {
     expect(seo.image).toBe("https://nodehub.uk/mission-zero-og.png");
     expect(seo.imageWidth).toBe(1200);
     expect(seo.imageHeight).toBe(630);
+  });
+
+  it("serves the node product at / and /node with one canonical homepage", () => {
+    const home = getRouteSeo("/");
+    const node = getRouteSeo("/node");
+    expect(home.title).toBe("node, near-miss detection for UK warehouses, by Praxis GB");
+    expect(home.canonical).toBe("https://nodehub.uk/");
+    expect(node).toEqual(home);
+    expect(home.description).toContain("its own cameras and its own network");
   });
 });

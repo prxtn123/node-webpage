@@ -40,7 +40,7 @@ describe("PartnersStrip", () => {
     expect(screen.getByRole("link", { name: "University of Manchester" })).toBeInTheDocument();
 
     const brand = screen.getByRole("link", { name: "node by Praxis GB" });
-    expect(brand).toHaveAttribute("href", "/node");
+    expect(brand).toHaveAttribute("href", "/");
     expect(brand.querySelector("img")).toHaveAttribute(
       "src",
       "/node-lockup-horizontal-transparent-light.png",

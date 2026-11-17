@@ -63,7 +63,7 @@ export const Navigation = () => {
         <div className="flex h-12 items-center justify-between gap-2">
           {/* Logo */}
           <button
-            onClick={() => navigate("/node")}
+            onClick={() => navigate("/")}
             className="flex shrink-0 items-center"
           >
             <img

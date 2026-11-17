@@ -1,6 +1,6 @@
 import { FormEvent, useState } from "react";
 import { Link } from "react-router-dom";
-import { Navigation } from "@/components/Navigation";
+import NavBar from "@/components/NavBar";
 import { Footer } from "@/components/Footer";
 
 export const JOIN_SUBJECT = "Join Mission Zero";
@@ -101,11 +101,10 @@ export default function MissionZero() {
 
   return (
     <div className="min-h-screen bg-white text-[#1A1A1A]">
-      <Navigation />
-      <div className="h-12" aria-hidden="true" />
+      <NavBar />
 
       <section className="bg-black text-white" aria-labelledby="hero-mark">
-        <div className="mx-auto max-w-[980px] px-6 pb-20 pt-16 md:pb-32 md:pt-24">
+        <div className="mx-auto max-w-[980px] px-6 pb-20 pt-24 md:pb-32 md:pt-32">
           <p className="mb-8 flex items-center gap-3 font-michroma text-[12px] uppercase tracking-[0.26em] text-[#B0B0B0]">
             <span className="h-2 w-2 shrink-0 rounded-full bg-[#94E2CC]" aria-hidden="true" />
             node by Praxis GB

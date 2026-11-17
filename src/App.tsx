@@ -5,7 +5,6 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect, useState, type ReactNode } from "react";
 import DocumentHead from "./components/DocumentHead";
-import Homepage from "./pages/Homepage";
 import Index from "./pages/Index";
 import Product from "./pages/Product";
 import About from "./pages/About";
@@ -56,7 +55,7 @@ export function AppRoutes() {
       <ScrollToTop />
       <DocumentHead />
       <Routes>
-          <Route path="/" element={<Homepage />} />
+          <Route path="/" element={<Index />} />
           <Route path="/node" element={<Index />} />
           <Route path="/product" element={<Product />} />
           <Route path="/about" element={<About />} />

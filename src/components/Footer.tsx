@@ -27,9 +27,10 @@ export const Footer = () => {
   const location = useLocation();
 
   const handleNavClick = (target: string) => {
-    // Scroll targets live on /node
-    if (location.pathname !== "/node") {
-      navigate("/node");
+    // Scroll targets live on the product homepage. /node serves the same page.
+    const onProduct = location.pathname === "/" || location.pathname === "/node";
+    if (!onProduct) {
+      navigate("/");
       setTimeout(() => {
         scrollToElement(target);
       }, 100);
@@ -75,7 +76,7 @@ export const Footer = () => {
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
             {/* Brand & Contact */}
             <div className="col-span-2">
-              <Link to="/node" className="inline-flex">
+              <Link to="/" className="inline-flex">
                 <img
                   src="/node-lockup-horizontal-transparent-light.png"
                   alt="node by Praxis GB"

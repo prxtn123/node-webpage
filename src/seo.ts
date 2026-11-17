@@ -21,43 +21,13 @@ const LEGACY_TITLE = "node | AI-Powered Logistics Safety";
 const LEGACY_DESCRIPTION =
   "AI-powered safety platform for logistics and supply chain. Prevent near misses, ensure compliance, and optimise workflows.";
 
-const homeDescription =
-  "We're on a mission to make workplaces accident-free. Praxis GB builds computer vision for warehouse and logistics safety. node is its product, a standalone, self-contained system. It uses its own cameras and its own network. Processing stays on site, with no cloud required. It is not connected to your IT network or CCTV.";
+const productDescription =
+  "node is a standalone, self-contained system. It uses its own cameras and its own network to flag MHE and pedestrian conflicts, PPE gaps and walkway breaches, processed on site, with clips and a site safety score for SHEQ teams. It is not connected to your IT network or CCTV.";
 
-const organizationJsonLd: Record<string, unknown> = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "Praxis GB",
-  legalName: "Praxis GB Ltd",
-  url: `${SITE_ORIGIN}/`,
-  logo: `${SITE_ORIGIN}/praxis-logo.png`,
-  email: "hello@praxisgb.com",
-  telephone: "+447542315784",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Manchester",
-    addressRegion: "England",
-    addressCountry: "GB",
-  },
-  description: homeDescription,
-};
-
-const home: RouteSeo = {
-  title: "Praxis GB, computer vision for warehouse and logistics safety",
-  description: homeDescription,
-  canonical: `${SITE_ORIGIN}/`,
-  image: `${SITE_ORIGIN}/images/hero-node.jpg`,
-  imageWidth: 1920,
-  imageHeight: 1280,
-  imageAlt: "Warehouse floor",
-  jsonLd: organizationJsonLd,
-};
-
-const node: RouteSeo = {
+const product: RouteSeo = {
   title: "node, near-miss detection for UK warehouses, by Praxis GB",
-  description:
-    "node is a standalone, self-contained system. It uses its own cameras and its own network to flag MHE and pedestrian conflicts, PPE gaps and walkway breaches, processed on site, with clips and a site safety score for SHEQ teams. It is not connected to your IT network or CCTV.",
-  canonical: `${SITE_ORIGIN}/node/`,
+  description: productDescription,
+  canonical: `${SITE_ORIGIN}/`,
   image: `${SITE_ORIGIN}/images/hero-node.jpg`,
   imageWidth: 1920,
   imageHeight: 1280,
@@ -66,8 +36,8 @@ const node: RouteSeo = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     name: "node",
-    url: `${SITE_ORIGIN}/node/`,
-    description: "AI-powered safety platform for logistics and supply chain.",
+    url: `${SITE_ORIGIN}/`,
+    description: productDescription,
     provider: {
       "@type": "Organization",
       name: "Praxis GB",
@@ -143,8 +113,7 @@ export function normalisePath(pathname: string) {
 
 export function getRouteSeo(pathname: string): RouteSeo {
   const path = normalisePath(pathname);
-  if (path === "/") return home;
-  if (path === "/node") return node;
+  if (path === "/" || path === "/node") return product;
   if (path === "/privacy") return privacy;
   if (path === "/missionzero") return missionZero;
   return legacy;
