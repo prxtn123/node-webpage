@@ -40,12 +40,19 @@ export default function NavBar() {
 
         <Link
           to="/node"
+          aria-label="node"
           aria-current={onNode ? "page" : undefined}
-          className={`shrink-0 text-xs font-normal transition-colors ${
-            onNode ? "text-white" : "text-white/80 hover:text-white"
+          className={`shrink-0 transition-opacity duration-200 ${
+            onNode ? "opacity-100" : "opacity-80 hover:opacity-100"
           }`}
         >
-          node
+          <img
+            src="/node-logo-compact.png"
+            alt=""
+            width={2736}
+            height={596}
+            className="block h-4 w-auto"
+          />
         </Link>
       </div>
     </header>
