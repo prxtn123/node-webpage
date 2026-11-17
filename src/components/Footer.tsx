@@ -74,7 +74,15 @@ export const Footer = () => {
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
             {/* Brand & Contact */}
             <div className="col-span-2">
-              <span className="font-semibold text-lg text-foreground">node</span>
+              <Link to="/node" className="inline-flex">
+                <img
+                  src="/node-lockup-horizontal-transparent-light.png"
+                  alt="node by Praxis GB"
+                  width={1811}
+                  height={306}
+                  className="h-7 w-auto"
+                />
+              </Link>
               <p className="text-sm text-muted-foreground mt-3 mb-6 max-w-xs">
                 Computer vision for warehouse and logistics safety, processed on site.
               </p>

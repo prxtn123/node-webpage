@@ -38,5 +38,13 @@ describe("PartnersStrip", () => {
     expect(screen.getByText("In partnership with")).toBeInTheDocument();
     expect(screen.getByRole("link", { name: "Greater Manchester Growth Hub" })).toBeInTheDocument();
     expect(screen.getByRole("link", { name: "University of Manchester" })).toBeInTheDocument();
+
+    const brand = screen.getByRole("link", { name: "node by Praxis GB" });
+    expect(brand).toHaveAttribute("href", "/node");
+    expect(brand.querySelector("img")).toHaveAttribute(
+      "src",
+      "/node-lockup-horizontal-transparent-light.png",
+    );
+    expect(screen.getByText("Computer vision for warehouse and logistics safety, processed on site.")).toBeInTheDocument();
   });
 });
