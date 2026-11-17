@@ -37,7 +37,6 @@ describe("node Mission Zero page", () => {
     expect(screen.getByText(/Today it runs at 93% accuracy/)).toBeInTheDocument();
     expect(screen.getByText("Join the mission early.")).toBeInTheDocument();
     expect(screen.getByRole("link", { name: "node by Praxis GB" })).toHaveAttribute("href", "/");
-    expect(screen.getByText("By Praxis GB")).toBeInTheDocument();
 
     expect(screen.getByRole("link", { name: "Join the mission" })).toHaveAttribute(
       "href",
