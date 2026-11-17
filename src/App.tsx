@@ -14,6 +14,7 @@ import Contact from "./pages/Contact";
 import Careers from "./pages/Careers";
 import Legal from "./pages/Legal";
 import HowItWorks from "./pages/HowItWorks";
+import MissionZero from "./pages/MissionZero";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -66,6 +67,7 @@ export function AppRoutes() {
           <Route path="/terms" element={<Legal />} />
           <Route path="/gdpr" element={<Legal />} />
           <Route path="/how-it-works" element={<HowItWorks />} />
+          <Route path="/missionzero" element={<MissionZero />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

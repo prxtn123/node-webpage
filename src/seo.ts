@@ -100,6 +100,31 @@ const privacy: RouteSeo = {
   },
 };
 
+const missionZeroDescription =
+  "Mission Zero is node's aim: accident-free workplaces, reached by cutting the accident frequency rate. Join us.";
+
+const missionZero: RouteSeo = {
+  title: "Mission Zero | node by Praxis GB",
+  description: missionZeroDescription,
+  canonical: `${SITE_ORIGIN}/missionzero`,
+  image: `${SITE_ORIGIN}/mission-zero-og.png`,
+  imageWidth: 1200,
+  imageHeight: 630,
+  imageAlt: "MISSION: ZERO",
+  jsonLd: {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: "Mission Zero",
+    url: `${SITE_ORIGIN}/missionzero`,
+    description: missionZeroDescription,
+    isPartOf: {
+      "@type": "WebSite",
+      name: "Praxis GB",
+      url: `${SITE_ORIGIN}/`,
+    },
+  },
+};
+
 const legacy: RouteSeo = {
   title: LEGACY_TITLE,
   description: LEGACY_DESCRIPTION,
@@ -121,6 +146,7 @@ export function getRouteSeo(pathname: string): RouteSeo {
   if (path === "/") return home;
   if (path === "/node") return node;
   if (path === "/privacy") return privacy;
+  if (path === "/missionzero") return missionZero;
   return legacy;
 }
 

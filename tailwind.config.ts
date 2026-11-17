@@ -50,6 +50,7 @@ export default {
       },
       fontFamily: {
         sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'SF Pro Display', 'system-ui', 'sans-serif'],
+        michroma: ['Michroma', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",

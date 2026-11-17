@@ -11,6 +11,7 @@ const footerLinks = {
   ],
   company: [
     { name: "About", path: "/about" },
+    { name: "Our Mission", path: "/missionzero" },
     { name: "Careers", path: "/careers" },
     { name: "Contact", path: "/contact" },
   ],
