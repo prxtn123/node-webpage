@@ -11,7 +11,7 @@ export default function MissionZero() {
       <main>
         <section className="flex min-h-screen flex-col justify-center px-5 pb-[16vh] pt-28 md:px-7" aria-labelledby="hero-line">
           <div className="mx-auto w-full max-w-[1080px]">
-            <p className="mb-9 text-[15px] font-normal tracking-[-0.01em] text-[#B0B0B0]">node Mission Zero</p>
+            <p className="mb-9 text-[15px] font-normal tracking-[-0.01em] text-[#B0B0B0]">Mission Zero</p>
             <div className="mb-12">
               <img
                 src="/mission-zero/wordmark-b-inverted.png"

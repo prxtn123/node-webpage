@@ -15,7 +15,7 @@ describe("node Mission Zero page", () => {
   it("shows the manifesto and a mailto join link, with no sign-up form", () => {
     renderPage();
 
-    expect(screen.getByText("node Mission Zero")).toBeInTheDocument();
+    expect(screen.getByText("Mission Zero")).toBeInTheDocument();
     expect(
       screen.getByRole("heading", {
         name: "It's our mission to make every workplace in the world accident-free.",
