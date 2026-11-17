@@ -33,11 +33,13 @@ describe("node Mission Zero page", () => {
     ).toBeInTheDocument();
     expect(screen.getByText(/No one should/)).toBeInTheDocument();
     expect(screen.getByText("Everyone home safe.")).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "Help us get there sooner." })).toBeInTheDocument();
+    expect(screen.getByText(/Today node runs at 93% accuracy/)).toBeInTheDocument();
     expect(screen.getByText("node by Praxis GB")).toBeInTheDocument();
 
     expect(screen.getByRole("link", { name: "Join the mission" })).toHaveAttribute(
       "href",
-      "mailto:hello@praxisgb.com?subject=Join%20the%20mission",
+      "mailto:hello@praxisgb.com?subject=Join%20the%20mission%20early",
     );
     expect(screen.getByText("This opens an email to hello@praxisgb.com.")).toBeInTheDocument();
     expect(screen.getByRole("link", { name: "Start a proof of concept" })).toHaveAttribute("href", "/node");

@@ -79,6 +79,7 @@ const prerenderRoutes = [
       "node Mission Zero",
       "every workplace in the world",
       "Everyone home safe.",
+      "93% accuracy",
     ],
   },
 ];

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import NavBar from "@/components/NavBar";
 
-const JOIN_MAILTO = "mailto:hello@praxisgb.com?subject=Join%20the%20mission";
+const JOIN_MAILTO = "mailto:hello@praxisgb.com?subject=Join%20the%20mission%20early";
 
 export default function MissionZero() {
   return (
@@ -119,6 +119,25 @@ export default function MissionZero() {
             <p className="mt-[0.28em] text-[clamp(36px,6.2vw,84px)] font-semibold leading-[1.06] tracking-[-0.035em]">
               Everyone home safe.
             </p>
+          </div>
+        </section>
+
+        <section className="px-5 py-[12vh] md:px-7" aria-labelledby="sooner-heading">
+          <div className="mx-auto w-full max-w-[1080px]">
+            <h2 id="sooner-heading" className="max-w-[14em] text-[clamp(32px,4.6vw,64px)] font-semibold leading-[1.08] tracking-[-0.035em]">
+              Help us get there sooner.
+            </h2>
+            <div className="mt-10 max-w-[36em] space-y-6 text-[clamp(18px,1.6vw,22px)] font-normal leading-[1.45] tracking-[-0.015em] text-[#D9D9D9]">
+              <p>
+                node learns from real warehouse footage. The more sites we see, the more accurate our models become, and the sooner we can help our customers get to zero accidents.
+              </p>
+              <p>
+                Today node runs at 93% accuracy across multiple violation types. We want it to recognise more types of violation, more accurately.
+              </p>
+              <p>
+                Join the mission early and let node monitor your warehouse. Your site helps train better models for everyone, including you.
+              </p>
+            </div>
           </div>
         </section>
 
