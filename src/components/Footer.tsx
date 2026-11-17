@@ -1,6 +1,7 @@
 import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { scrollToElement } from "@/lib/scroll";
+import { PartnersStrip } from "@/components/PartnersStrip";
 
 const footerLinks = {
   product: [
@@ -154,6 +155,8 @@ export const Footer = () => {
             </p>
           </div>
         </div>
+
+        <PartnersStrip />
       </div>
     </footer>
   );
