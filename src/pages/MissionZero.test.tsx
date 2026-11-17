@@ -23,18 +23,19 @@ describe("node Mission Zero page", () => {
     ).toBeInTheDocument();
     expect(screen.getByText(/In today's world,/)).toBeInTheDocument();
     expect(screen.getByText("Our cars drive themselves.")).toBeInTheDocument();
-    expect(screen.getByText(/Our homes turn/)).toBeInTheDocument();
-    expect(screen.getByText(/our favourite player takes/)).toBeInTheDocument();
+    expect(screen.getByText(/Your phone knows it's you/)).toBeInTheDocument();
+    expect(screen.getByText(/three streets ahead/)).toBeInTheDocument();
     expect(screen.getByText(/getting hurt at work/)).toBeInTheDocument();
     expect(
       screen.getByText(
-        "The technology already exists to see the warning signs before an accident happens, and it is rapid enough to act.",
+        "The technology already exists to spot a near-miss the moment it happens (a pedestrian too close to a forklift, a missing hi-vis, someone outside the walkway) and alert someone while there's still time to act.",
       ),
     ).toBeInTheDocument();
     expect(screen.getByText(/No one should/)).toBeInTheDocument();
     expect(screen.getByText("Everyone home safe.")).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: "Help us get there sooner." })).toBeInTheDocument();
-    expect(screen.getByText(/Today node runs at 93% accuracy/)).toBeInTheDocument();
+    expect(screen.getByText(/Today it runs at 93% accuracy/)).toBeInTheDocument();
+    expect(screen.getByText("Join the mission early.")).toBeInTheDocument();
     expect(screen.getByText("node by Praxis GB")).toBeInTheDocument();
 
     expect(screen.getByRole("link", { name: "Join the mission" })).toHaveAttribute(
