@@ -162,7 +162,10 @@ export default function MissionZero() {
 
       <footer className="border-t border-white/10 px-5 py-10 md:px-7">
         <div className="mx-auto flex w-full max-w-[1080px] flex-wrap items-baseline justify-between gap-4">
-          <p className="text-[15px] font-medium tracking-[-0.015em]">node by Praxis GB</p>
+          <Link to="/" className="inline-flex flex-col items-end" aria-label="node by Praxis GB">
+            <img src="/node-logo-compact.png" alt="" width={2736} height={596} className="block h-7 w-auto" />
+            <span className="mt-1.5 text-[10px] font-normal uppercase leading-none tracking-[0.18em] text-[#B0B0B0]">By Praxis GB</span>
+          </Link>
           <p className="flex gap-[18px] text-[12px] tracking-[-0.01em] text-[#888888]">
             <Link to="/privacy">Privacy</Link>
             <Link to="/terms">Terms</Link>
