@@ -70,13 +70,11 @@ export default function MissionZero() {
         <section className="px-5 py-[22vh] md:px-7">
           <div className="mx-auto w-full max-w-[1080px]">
             <p className="max-w-[12em] text-[clamp(34px,5.8vw,76px)] font-semibold leading-[1.06] tracking-[-0.035em]">
-              Our homes turn
+              Your phone knows it's you
               <br />
-              the heating on
+              from a glance
               <br />
-              before we're
-              <br />
-              through the door.
+              in the dark.
             </p>
           </div>
         </section>
@@ -84,9 +82,9 @@ export default function MissionZero() {
         <section className="px-5 py-[22vh] md:px-7">
           <div className="mx-auto w-full max-w-[1080px]">
             <p className="max-w-[12em] text-[clamp(34px,5.8vw,76px)] font-semibold leading-[1.06] tracking-[-0.035em]">
-              We can count every step
+              Your maps see the traffic
               <br />
-              our favourite player takes.
+              three streets ahead.
             </p>
           </div>
         </section>
@@ -104,7 +102,7 @@ export default function MissionZero() {
         <section className="px-5 py-[18vh] md:px-7" aria-label="Belief">
           <div className="mx-auto w-full max-w-[1080px]">
             <p className="max-w-[18em] text-[clamp(22px,2.6vw,34px)] font-normal leading-[1.35] tracking-[-0.02em] text-[#D9D9D9]">
-              The technology already exists to see the warning signs before an accident happens, and it is rapid enough to act.
+              The technology already exists to spot a near-miss the moment it happens (a pedestrian too close to a forklift, a missing hi-vis, someone outside the walkway) and alert someone while there's still time to act.
             </p>
           </div>
         </section>
@@ -129,13 +127,11 @@ export default function MissionZero() {
             </h2>
             <div className="mt-10 max-w-[36em] space-y-6 text-[clamp(18px,1.6vw,22px)] font-normal leading-[1.45] tracking-[-0.015em] text-[#D9D9D9]">
               <p>
-                node learns from real warehouse footage. The more sites we see, the more accurate our models become, and the sooner we can help our customers get to zero accidents.
+                node watches your workplace in real time and flags the near-misses that usually go unseen. Today it runs at 93% accuracy across multiple violation types. The more sites we see, the faster that number rises, and the sooner we all get closer to zero.
               </p>
+              <p className="text-white">Join the mission early.</p>
               <p>
-                Today node runs at 93% accuracy across multiple violation types. We want it to recognise more types of violation, more accurately.
-              </p>
-              <p>
-                Join the mission early and let node monitor your warehouse. Your site helps train better models for everyone, including you.
+                Start with a proof of concept on your site, with no changes to your existing cameras or IT network. Your site helps train better models for everyone, including you.
               </p>
             </div>
           </div>
@@ -166,7 +162,10 @@ export default function MissionZero() {
 
       <footer className="border-t border-white/10 px-5 py-10 md:px-7">
         <div className="mx-auto flex w-full max-w-[1080px] flex-wrap items-baseline justify-between gap-4">
-          <p className="text-[15px] font-medium tracking-[-0.015em]">node by Praxis GB</p>
+          <Link to="/" className="inline-flex flex-col items-end" aria-label="node by Praxis GB">
+            <img src="/node-logo-compact.png" alt="" width={2736} height={596} className="block h-7 w-auto" />
+            <span className="mt-1.5 text-[10px] font-normal uppercase leading-none tracking-[0.18em] text-[#B0B0B0]">By Praxis GB</span>
+          </Link>
           <p className="flex gap-[18px] text-[12px] tracking-[-0.01em] text-[#888888]">
             <Link to="/privacy">Privacy</Link>
             <Link to="/terms">Terms</Link>
