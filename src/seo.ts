@@ -22,7 +22,7 @@ const LEGACY_DESCRIPTION =
   "AI-powered safety platform for logistics and supply chain. Prevent near misses, ensure compliance, and optimise workflows.";
 
 const homeDescription =
-  "Praxis GB builds computer vision for warehouse and logistics safety. node is its product, a standalone, self-contained system. It uses its own cameras and its own network. Processing stays on site, with no cloud required. It is not connected to your IT network or CCTV.";
+  "We're on a mission to make workplaces accident-free. Praxis GB builds computer vision for warehouse and logistics safety. node is its product, a standalone, self-contained system. It uses its own cameras and its own network. Processing stays on site, with no cloud required. It is not connected to your IT network or CCTV.";
 
 const organizationJsonLd: Record<string, unknown> = {
   "@context": "https://schema.org",
