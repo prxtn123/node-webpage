@@ -32,7 +32,7 @@ const standalonePoints = [
 export default function Homepage() {
   return (
     <div className="min-h-screen bg-background">
-      <NavBar home />
+      <NavBar />
 
       <main>
         <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
