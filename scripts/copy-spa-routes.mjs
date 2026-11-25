@@ -78,7 +78,7 @@ const prerenderRoutes = [
     mustInclude: [
       "node Mission Zero",
       "every workplace in the world",
-      "Everyone home safe.",
+      "This technology should keep people safe.",
       "93% accuracy",
     ],
   },

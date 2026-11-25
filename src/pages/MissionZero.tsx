@@ -1,7 +1,23 @@
 import { Link } from "react-router-dom";
 import NavBar from "@/components/NavBar";
+import { CarSketch, PhoneSketch, MapSketch, ForkliftSketch } from "@/components/MissionZeroSketches";
 
 const JOIN_MAILTO = "mailto:hello@praxisgb.com?subject=Join%20the%20mission%20early";
+
+const manifesto = [
+  {
+    Sketch: CarSketch,
+    text: "Our cars drive themselves.",
+  },
+  {
+    Sketch: PhoneSketch,
+    text: "Your phone knows it's you from a glance, in the dark.",
+  },
+  {
+    Sketch: MapSketch,
+    text: "Your maps see the traffic three streets ahead.",
+  },
+] as const;
 
 export default function MissionZero() {
   return (
@@ -9,123 +25,82 @@ export default function MissionZero() {
       <NavBar />
 
       <main>
-        <section className="flex min-h-screen flex-col justify-center px-5 pb-[16vh] pt-28 md:px-7" aria-labelledby="hero-line">
+        <section className="px-5 pb-12 pt-28 md:px-7 md:pb-14 md:pt-[6.5rem]" aria-labelledby="hero-line">
           <div className="mx-auto w-full max-w-[1080px]">
-            <p className="mb-9 text-[15px] font-normal tracking-[-0.01em] text-[#B0B0B0]">Mission Zero</p>
-            <div className="mb-12">
+            <p className="mb-4 text-[15px] font-normal tracking-[-0.01em] text-[#B0B0B0]">Mission Zero</p>
+            <div className="mb-5 md:mb-6">
               <img
                 src="/mission-zero/wordmark-b-inverted.png"
                 alt="MISSION: ZERO"
                 width={4482}
                 height={358}
-                className="hidden h-auto w-full max-w-[920px] md:block"
+                className="hidden h-auto w-full max-w-[560px] md:block"
               />
-              <div className="flex flex-col items-start gap-2.5 md:hidden">
+              <div className="flex flex-col items-start gap-2 md:hidden">
                 <img
                   src="/mission-zero/wordmark-b-inverted-mission.png"
                   alt=""
                   width={2690}
                   height={338}
-                  className="block h-auto w-full"
+                  className="block h-auto w-full max-w-[320px]"
                 />
                 <img
                   src="/mission-zero/wordmark-b-inverted-zero.png"
                   alt="MISSION: ZERO"
                   width={1645}
                   height={366}
-                  className="block h-auto w-[61.2%]"
+                  className="block h-auto w-[58%] max-w-[196px]"
                 />
               </div>
             </div>
-            <h1 id="hero-line" className="max-w-[16em] text-[clamp(32px,5.2vw,68px)] font-semibold leading-[1.08] tracking-[-0.035em]">
-              It's our mission to make
-              <br />
-              every workplace in the world
-              <br />
-              accident-free.
+            <h1
+              id="hero-line"
+              className="max-w-[20em] text-[clamp(26px,3.3vw,40px)] font-semibold leading-[1.12] tracking-[-0.035em]"
+            >
+              It's our mission to make every workplace in the world accident-free.
             </h1>
-          </div>
-        </section>
+            <p className="mt-4 max-w-[38em] text-[clamp(17px,1.55vw,20px)] font-normal leading-[1.4] tracking-[-0.02em] text-[#D9D9D9]">
+              In today's world, there's no reason for anyone to go home injured.
+            </p>
 
-        <section className="px-5 py-[18vh] md:px-7" aria-label="Opening">
-          <div className="mx-auto w-full max-w-[1080px]">
-            <p className="max-w-[14em] text-[clamp(32px,5.4vw,72px)] font-semibold leading-[1.06] tracking-[-0.035em]">
-              In today's world,
-              <br />
-              there's no reason for anyone
-              <br />
-              to go home injured.
+            <ul className="mt-7 grid grid-cols-1 gap-5 sm:mt-8 sm:grid-cols-3 sm:gap-8">
+              {manifesto.map(({ Sketch, text }) => (
+                <li key={text} className="flex items-center gap-4 sm:flex-col sm:items-start sm:gap-3">
+                  <Sketch className="h-16 w-16 shrink-0 text-white sm:h-16 sm:w-16 md:h-[4.5rem] md:w-[4.5rem]" />
+                  <p className="text-[clamp(17px,1.6vw,20px)] font-semibold leading-[1.3] tracking-[-0.02em]">{text}</p>
+                </li>
+              ))}
+            </ul>
+
+            <p className="mt-7 text-[clamp(22px,2.6vw,32px)] font-semibold leading-[1.15] tracking-[-0.035em] md:mt-8">
+              So why are people still getting hurt at work?
+            </p>
+
+            <div className="mt-5 flex flex-col items-start gap-6 md:mt-6 md:flex-row md:items-center md:gap-10">
+              <p className="max-w-[36em] text-[clamp(17px,1.5vw,20px)] font-normal leading-[1.45] tracking-[-0.02em] text-[#D9D9D9]">
+                The technology already exists to spot a near-miss the moment it happens (a pedestrian too close to a forklift, a missing hi-vis, someone outside the walkway) and alert someone while there's still time to act.
+              </p>
+              <ForkliftSketch className="h-28 w-auto shrink-0 text-white md:h-28" />
+            </div>
+
+            <p className="mt-6 text-[clamp(26px,3.4vw,42px)] font-semibold leading-[1.12] tracking-[-0.035em] md:mt-7">
+              This technology should keep people safe.
+            </p>
+            <p className="mt-[0.2em] text-[clamp(26px,3.4vw,42px)] font-semibold leading-[1.12] tracking-[-0.035em]">
+              Now it can.
             </p>
           </div>
         </section>
 
-        <section className="px-5 py-[22vh] md:px-7" aria-label="Manifesto">
-          <div className="mx-auto w-full max-w-[1080px]">
-            <p className="max-w-[12em] text-[clamp(34px,5.8vw,76px)] font-semibold leading-[1.06] tracking-[-0.035em]">
-              Our cars drive themselves.
-            </p>
-          </div>
-        </section>
-
-        <section className="px-5 py-[22vh] md:px-7">
-          <div className="mx-auto w-full max-w-[1080px]">
-            <p className="max-w-[12em] text-[clamp(34px,5.8vw,76px)] font-semibold leading-[1.06] tracking-[-0.035em]">
-              Your phone knows it's you
-              <br />
-              from a glance
-              <br />
-              in the dark.
-            </p>
-          </div>
-        </section>
-
-        <section className="px-5 py-[22vh] md:px-7">
-          <div className="mx-auto w-full max-w-[1080px]">
-            <p className="max-w-[12em] text-[clamp(34px,5.8vw,76px)] font-semibold leading-[1.06] tracking-[-0.035em]">
-              Your maps see the traffic
-              <br />
-              three streets ahead.
-            </p>
-          </div>
-        </section>
-
-        <section className="px-5 pb-[24vh] pt-[26vh] md:px-7">
-          <div className="mx-auto w-full max-w-[1080px]">
-            <p className="max-w-[13em] text-[clamp(34px,5.8vw,76px)] font-semibold leading-[1.06] tracking-[-0.035em]">
-              So why are people still
-              <br />
-              getting hurt at work?
-            </p>
-          </div>
-        </section>
-
-        <section className="px-5 py-[18vh] md:px-7" aria-label="Belief">
-          <div className="mx-auto w-full max-w-[1080px]">
-            <p className="max-w-[18em] text-[clamp(22px,2.6vw,34px)] font-normal leading-[1.35] tracking-[-0.02em] text-[#D9D9D9]">
-              The technology already exists to spot a near-miss the moment it happens (a pedestrian too close to a forklift, a missing hi-vis, someone outside the walkway) and alert someone while there's still time to act.
-            </p>
-          </div>
-        </section>
-
-        <section className="px-5 pb-[14vh] pt-[22vh] md:px-7" aria-label="Close">
-          <div className="mx-auto w-full max-w-[1080px]">
-            <p className="text-[clamp(36px,6.2vw,84px)] font-semibold leading-[1.06] tracking-[-0.035em]">
-              No one should
-              <br />
-              go home injured.
-            </p>
-            <p className="mt-[0.28em] text-[clamp(36px,6.2vw,84px)] font-semibold leading-[1.06] tracking-[-0.035em]">
-              Everyone home safe.
-            </p>
-          </div>
-        </section>
-
-        <section className="px-5 py-[12vh] md:px-7" aria-labelledby="sooner-heading">
-          <div className="mx-auto w-full max-w-[1080px]">
-            <h2 id="sooner-heading" className="max-w-[14em] text-[clamp(32px,4.6vw,64px)] font-semibold leading-[1.08] tracking-[-0.035em]">
+        <section className="px-5 pb-16 pt-4 md:px-7 md:pb-20 md:pt-6" aria-labelledby="sooner-heading">
+          <div className="mx-auto w-full max-w-[1080px] border-t border-white/10 pt-10 md:pt-12">
+            <h2
+              id="sooner-heading"
+              className="max-w-[14em] text-[clamp(26px,3.2vw,40px)] font-semibold leading-[1.12] tracking-[-0.035em]"
+            >
               Help us get there sooner.
             </h2>
-            <div className="mt-10 max-w-[36em] space-y-6 text-[clamp(18px,1.6vw,22px)] font-normal leading-[1.45] tracking-[-0.015em] text-[#D9D9D9]">
+            <div className="mt-6 max-w-[36em] space-y-5 text-[clamp(17px,1.45vw,20px)] font-normal leading-[1.45] tracking-[-0.015em] text-[#D9D9D9] md:mt-8">
               <p>
                 node watches your workplace in real time and flags the near-misses that usually go unseen. Today it runs at 93% accuracy across multiple violation types. The more sites we see, the faster that number rises, and the sooner we all get closer to zero.
               </p>
@@ -134,12 +109,8 @@ export default function MissionZero() {
                 Start with a proof of concept on your site, with no changes to your existing cameras or IT network. Your site helps train better models for everyone, including you.
               </p>
             </div>
-          </div>
-        </section>
 
-        <section className="px-5 pb-[12vh] pt-[10vh] md:px-7" aria-label="Join the mission">
-          <div className="mx-auto w-full max-w-[1080px]">
-            <div className="flex flex-wrap items-center gap-x-7 gap-y-4">
+            <div className="mt-8 flex flex-wrap items-center gap-x-7 gap-y-4 md:mt-10">
               <a
                 href={JOIN_MAILTO}
                 className="inline-flex items-center justify-center rounded-full bg-white px-7 py-3.5 text-[15px] font-medium tracking-[-0.01em] text-black"
