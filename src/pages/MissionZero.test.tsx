@@ -31,8 +31,8 @@ describe("node Mission Zero page", () => {
         "The technology already exists to spot a near-miss the moment it happens (a pedestrian too close to a forklift, a missing hi-vis, someone outside the walkway) and alert someone while there's still time to act.",
       ),
     ).toBeInTheDocument();
-    expect(screen.getByText(/No one should/)).toBeInTheDocument();
-    expect(screen.getByText("Everyone home safe.")).toBeInTheDocument();
+    expect(screen.getByText("This technology should keep people safe.")).toBeInTheDocument();
+    expect(screen.getByText("Now it can.")).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: "Help us get there sooner." })).toBeInTheDocument();
     expect(screen.getByText(/Today it runs at 93% accuracy/)).toBeInTheDocument();
     expect(screen.getByText("Join the mission early.")).toBeInTheDocument();
